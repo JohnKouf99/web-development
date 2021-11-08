@@ -5,24 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JKed | Καλώς ορίσατε στο JKed</title>
-    <link rel="shortcut icon" href="images/fav/favicon-32x32.png" type="image/png">
+    <link rel="shortcut icon" href="images/fav/favicon-32x32.png" type="image/png"> <!--auto xreiazetai?-->
+    <link rel="stylesheet" href="style.css">
 </head>
-<body style="background-color:lightgrey;">
+<body>
 
-    <div>
-        <img src="images/fav/android-chrome-512x512.png" width="200" height="200" >
+    <div style="background-color: black">
+        <img src="images/fav/android-chrome-512x512.png" class="center"> <!--to exw valei pantou mporei na prepei na mpei se css afou teleiwsei-->
+    
     </div>
 
-    <nav id="main nav">
-        <a href="index.html">ΚΎΡΙΑ ΣΕΛΙΔΑ</a>|
-        <a href="about.html">ΣΧΕΤΙΚΑ ΜΕ ΕΜΑΣ</a>|
-        <a href="courses.html">ΜΑΘΗΜΑΤΑ</a>|
+    <nav id="mainnav">
+        <a href="index.html">ΚΎΡΙΑ ΣΕΛΙΔΑ</a>
+        <a href="about.html">ΣΧΕΤΙΚΑ ΜΕ ΕΜΑΣ</a>
+        <a href="courses.html">ΜΑΘΗΜΑΤΑ</a>
         <a href="contactus.html">ΕΠΙΚΟΙΝΩΝΙΑ</a>
     </nav>
     <hr>
 
 
-    <p>Το JKed είναι από τα κορυφαίες σελίδες online εκμάθησης. Είτε ενδιαφέρεστε να μάθετε μόνοι σας,
+    <p class="main-intro">Το JKed είναι από τα κορυφαίες σελίδες online εκμάθησης. Είτε ενδιαφέρεστε να μάθετε μόνοι σας,
         αξιοποιώντας τα διαδικτυακά μαθήματα για να εκπαιδεύσετε το εργατικό δυναμικό σας ή δημιουργώντας ένα MOOC, βρίσκεστε στο σωστό μέρος!</p>
 
     <div class = "main-intro">
@@ -62,15 +64,15 @@
         <h2>Ρίχτε μια ματία στα πιο δημοφιλή μαθήματα:</h2>
         <ul>
             <a href="cpp.html" target="blank">
-            <img src="images/pc.png" width="150" height="150">Γλώσσα Προγραμματισμού C++</a>
+            <img src="images/pc.png" class="smallimage">Γλώσσα Προγραμματισμού C++</a>
         </ul>
         <ul>
             <a href="chinese.html" target="blank">
-            <img src="images/language.png" width="150" height="150">Κινέζικα</a>
+            <img src="images/language.png"  class="smallimage">Κινέζικα</a>
         </ul>
         <ul>
-            <a href=".html" target="blank">
-            <img src="images/art.png" width="150" height="150">Μαθήματα Τέχνης</a>
+            <a href="arts.html" target="blank">
+            <img src="images/art.png" class="smallimage">Μαθήματα Τέχνης</a>
         </ul>
         
     </div>
@@ -83,16 +85,20 @@
     </p>
     <hr>
     <footer>
-            <a>Επικοινωνήστε μαζί μας:</a>
-
+            
+            <div id="footer">
             <ul>
-                <li><a>Τηλ.  2109999999</a></li>
-                <li><a href= "mailto:  info@jked.gr">Email: info@jked.gr</a></li>
-                <li><a href="https://www.facebook.com/" target="_blank"> Facebook </a>|</li>
-                <li><a href="https://twitter.com/" target="_blank">Twitter </a>|</li>
-            </ul>
-    
-            <p>© 2021 JKed. All rights reserved.</p>
+                <li style="float:left;"><a>Επικοινωνήστε μαζί μας:  </a></li>
+                <li><a> ||Τηλ.  2109999999</a>||</li>
+                <li><a href= "mailto:  info@jked.gr">Email: info@jked.gr</a>||</li>
+                <li><a href="https://www.facebook.com/" target="_blank"> Facebook </a>||</li>
+                <li><a href="https://twitter.com/" target="_blank">Twitter </a></li>
+            </ul></div>
+
+            <div id="footer">
+                <ul><li><a> © 2021 JKed. All rights reserved.</li></ul></div>  
+              
+            
     </footer>
 
 </body>

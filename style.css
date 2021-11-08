@@ -1,0 +1,74 @@
+body{background-color: lightgray;}
+
+
+#footer  {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+    
+
+  }
+
+  #footer li {
+    display: inline-block;
+    overflow: hidden;
+    
+    
+  }
+
+
+
+
+
+#mainnav{ 
+background-color: lightpink;
+font-size: large;
+display: flex;
+justify-content: space-around;
+}
+
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10%;
+  }
+
+ 
+
+  /*same as centre but smaller*/
+  .smallimage {  
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    background-color: lightskyblue;
+  }
+
+.main-intro{
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}  
+
+.main-select-courses{
+    background-color: lightseagreen;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.featured-courses{
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+
+}
