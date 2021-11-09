@@ -1,74 +1,135 @@
-body{background-color: lightgray;}
 
 
-#footer  {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    
-    
+/*sets the background color for the whole page*/
+body{
+  background-color: rgb(209, 198, 191);
+}
 
-  }
-
-  #footer li {
-    display: inline-block;
-    overflow: hidden;
-    
-    
-  }
-
-
-
-
-
-#mainnav{ 
-background-color: lightpink;
-font-size: large;
-display: flex;
-justify-content: space-around;
+/*sets font size and family for some headers*/
+.index{
+  font-family: 'Brush Script MT', cursive;
+  font-size: 250%;
 }
 
 
-.center {
-    display: block;
+
+  /*sets the list style for the footer*/
+  #footer  {  
+    list-style: none;
+    font-family: Georgia, serif;
+  }
+
+
+  /*sets the display feature for footer elements*/
+  #footer li { 
+    display: inline;     
+  }
+
+/*sets the color for the top of the page*/
+.toppage{ 
+  background-color: rgb(141, 182, 199) 
+}
+
+
+/*sets navigation bar features such as color, font and the display*/
+#mainnav{  
+background-color: rgb(193, 179, 142);
+font-family: Georgia, serif;
+font-size: large;
+display: flex;
+justify-content: space-around;
+
+}
+
+/*class that places an image at the centre*/
+.center { 
+    display:block;
     margin-left: auto;
     margin-right: auto;
     width: 10%;
+    
   }
 
- 
+  
 
   /*same as centre but smaller*/
   .smallimage {  
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 20%;
-    background-color: lightskyblue;
+    width: 100%;
+    height: auto;
+    
   }
 
+  /*sets some text at the centre of the page with a specific width and font family*/
 .main-intro{
+    font-family: Georgia, serif;
     text-align: center;
-    display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
 }  
 
+ /*sets some text at the centre of the page with a specific width and font family plus a background color*/
 .main-select-courses{
-    background-color: lightseagreen;
+    background-color: rgb(177, 194, 122);
+    font-family: Georgia, serif;
     text-align: center;
-    display: block;
     margin-left: auto;
     margin-right: auto;
     width: 100%;
 }
 
-.featured-courses{
+/*to idio me main-into an thes to allazoume alliws delete*/
+.featured-courses{        
+    font-family: Georgia, serif;
     text-align: center;
-    display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
 
+}
+
+/*formats the top courses lists*/
+.top-courses{           
+  display: flex;
+  margin-left: 90px;
+}
+
+
+/*sets two elements in a flex format with a specific width and a small margin*/
+.course{
+  max-width: 70%;
+  display: flex;
+  margin: 0 5px;
+}
+
+/*sets some feature for images on the courses lists such as border color, width, height, an margins*/
+.course-img{
+  width: 400px;
+  height: 280px;
+  border: 5px solid #555;
+  margin-top: 10px;
+  margin-left: 50px;
+  
+}
+
+
+/* unvisited link */
+a:link {
+  color: blue;
+}
+
+/* visited link */
+a:visited {
+  color: purple;
+}
+
+/* mouse over link */
+a:hover {
+  color: green;
+}
+
+/* selected link */
+a:active {
+  color: red;
 }
