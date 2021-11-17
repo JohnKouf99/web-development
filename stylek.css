@@ -1,73 +1,47 @@
 
 body {
-    background-color: whitesmoke;
+    background-color: whitesmoke; 
     margin:0;
     padding:0;
+
 }
 
 header{
-    background-color: rgba(19, 19, 19, 0.89);
+    background-color: rgba(19, 19, 19, 0.89); 
     padding-top: 0px;
     margin-top: 0px;
 }
 
-.wrap{
+.wrap{ /* gia thn estiash ths selidas h oloklhrwn div sto kentro */
     max-width: 1300px;
     margin: auto;
 }
 
-body a:hover{
+body a:hover{ /* allazw xrwma se ola ta a elements otan kanw hober */
     color:#BB1846;
 }
 
-body a:link {
+body a:link { /* allazw xrwma se ola ta a links*/
     color: whitesmoke;
 }
 
-body a:visited {
+body a:visited { /* allazw xrwma se ola ta a visited links */
     color:#BB1846;
 }
 
-body a:active{
+body a:active{ /* allazw xrwma se ola ta a thn wra pou clickarw*/
     color:#414042;
 }
 
-.logo {
+.logo { /* klash gia to logo ths selidas panw aristera*/
     width: 210px;
     height: 100px;
     padding-top:4px;
     padding-left:10px;
-    float:left;
+    float:left; /* stoixish aristera */
 }
 
-.main-intro {
-    padding: 30px;
-    background-color:#BB1846;
-    background-image: url(images/crowd.jpg);
-    background-size:cover;                      
-    background-repeat:no-repeat;
-    background-position:center center;
-    background-blend-mode:luminosity;
-    height: 400px;
-    user-select:none
-}
-
-.main-intro p{
-    margin:auto;
-    padding:80px;
-    font-family: 'Segoe UI';
-    font-size: 200%;
-    text-align: center;
-    font-weight: bold;
-    color: whitesmoke;
-}
-
-.main-secondary{
-    background-color: rgba(19, 19, 19, 0.89);
-    height:50px;
-}
-
-.main-nav{
+.main-nav{ /* klash gia to main navigation menu*/
     padding: 40px;
     text-align: right;
     margin-left: auto;
@@ -76,17 +50,67 @@ body a:active{
     font-size: 120%
 }
 
-.main-nav a{
-    padding-right:20px;
+.main-nav a{ 
+    padding:20px; /* skopos: spacing twn menu items*/
 }
 
-.main-form label {
+.main-nav a:hover{ /* vazw ena gri background otan kanw hover ta menu items*/
+    background-color:grey;
+    border-radius: 50px;
+}
+
+.main-form label { /* text configuration gia th forma*/
     font-family: 'Segoe UI';
     font-size: 130%;
     color: whitesmoke;
 }
 
-button[type=submit] {
+.main-intro { /* klash gia to prwto meros kathe selidas kai to merge enos background color kai enos bacground image */
+    padding: 30px;
+    background-color:#BB1846;  /*color */
+    background-image: url(images/crowd.jpg); /* background image */
+    background-size:cover;  /*sizarw thn eikona na kanei cover to element mou*/                     
+    background-repeat:no-repeat; /*de thelw na epanalamvanetai*/
+    background-position:center center;
+    background-blend-mode:luminosity; /* mode gia to merge */
+    height: 400px; 
+    user-select:none /* kanei disable thn epilogh text */
+}
+
+.main-intro p{ /*font configuration gia to main intro */
+    margin:auto;
+    padding:80px;
+    font-family: 'Segoe UI';
+    font-size: 200%;
+    text-align: center;
+    font-weight: bold;
+    color:whitesmoke;
+}
+
+.main-intro.about{ /* aparaithto gia allagh eikonas kai blend mode se diaforetikes selides */
+    background-image: url(images/students2.jpg);
+    background-blend-mode:screen;
+}
+
+.main-intro.about p{  /* aparaithto gia allagh font kai color se diaforetikes selides */
+    padding:50px;
+    color:rgba(19, 19, 19, 0.924);
+}
+
+.secondary{ /* klash gia mia gri bara katw apo to main-intro */
+    background-color: rgba(19, 19, 19, 0.89);
+    height:50px;
+}
+
+.main-form { 
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: #414042;
+    padding: 15px;
+    margin-bottom:15px;
+}
+
+button[type=submit] { /* customization tou button ths formas */
     background-color: #BB1846;
     color: whitesmoke;
     padding: 12px 20px;
@@ -95,40 +119,82 @@ button[type=submit] {
     cursor: pointer;
 }
 
-button[type=submit]:hover {
+button[type=submit]:hover { /* customization tou button ths formas sto hover */
     background-color: #FFFFAA;
     color: black;
 }
 
-.main-form {
-    margin-top: 20px;
-    border-radius: 5px;
-    background-color: #414042;
-    padding: 15px;
-    margin-bottom:15px;
+input[type=text], textarea  { 
+    width: 100%; 
+    padding: 12px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; /*  */
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical /* dinoume thn epilogh mono vertically */
 }
 
-input[type=text], textarea  {
-    width: 100%; /* Full width */
-    padding: 12px; /* Some padding */ 
-    border: 1px solid #ccc; /* Gray border */
-    border-radius: 4px; /* Rounded borders */
-    box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 6px; /* Add a top margin */
-    margin-bottom: 16px; /* Bottom margin */ 
-    resize: vertical
+.about-text {  /* text kentrika */
+    text-align: center;
 }
 
-footer{
+.text-head { /* main headings tou about */
+    font-weight:bold;
+    font-size: xX-large;
+    color:#BB1846;
+    font-family: fantasy; 
+}
+
+.text-sub { /* aplo text tou about */
+    color:rgba(19, 19, 19, 0.924);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size:large;
+}
+
+.text-names { /* member text tou about */
+    color:black;
+    font-weight: bold;
+    font-family:'Times New Roman', Times, serif;
+    text-align: center;
+    text-decoration:underline;
+}
+
+.our-team img{ /* image customization gia ta members */
+    width: 300px;
+    height: 300px;
+    padding:20px;
+    margin: 20px;
+    border-radius: 200px;
+}
+
+.our-team > .members-align:nth-child(2n-1) > img{ /* stoixizw aristera kathe allo paidi ksekinontas apo to 2o */
+    float:left;
+}
+
+.our-team > .members-align:nth-child(2n) > img { /* stoixizw deksia kathe allo paidi ksekinontas apo to 1o  */
+    float:right;
+}
+
+.our-team p{ /* for spacing purposes */
+    padding:40px;
+}
+
+.members-align { /* for spacing purposes */
+    width:100%;
+    height: 500px;
+}
+
+footer { /* for spacing purposes */
     background-color:rgba(19, 19, 19, 0.924);
     padding-bottom: 50px;
     padding-top: 20px;
     padding-left:20px;
     padding-right:20px;
-    margin:0,0;
+    margin-top:20px;
 }
 
-footer a,p,li {
+footer a,p,li { 
     color:white;
     font-size: 120%;
 }
@@ -136,4 +202,5 @@ footer a,p,li {
 .copyright{
     float: right;
 }
+
 
