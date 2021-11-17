@@ -1,0 +1,139 @@
+
+body {
+    background-color: whitesmoke;
+    margin:0;
+    padding:0;
+}
+
+header{
+    background-color: rgba(19, 19, 19, 0.89);
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+.wrap{
+    max-width: 1300px;
+    margin: auto;
+}
+
+body a:hover{
+    color:#BB1846;
+}
+
+body a:link {
+    color: whitesmoke;
+}
+
+body a:visited {
+    color:#BB1846;
+}
+
+body a:active{
+    color:#414042;
+}
+
+.logo {
+    width: 210px;
+    height: 100px;
+    padding-top:4px;
+    padding-left:10px;
+    float:left;
+}
+
+.main-intro {
+    padding: 30px;
+    background-color:#BB1846;
+    background-image: url(images/crowd.jpg);
+    background-size:cover;                      
+    background-repeat:no-repeat;
+    background-position:center center;
+    background-blend-mode:luminosity;
+    height: 400px;
+    user-select:none
+}
+
+.main-intro p{
+    margin:auto;
+    padding:80px;
+    font-family: 'Segoe UI';
+    font-size: 200%;
+    text-align: center;
+    font-weight: bold;
+    color: whitesmoke;
+}
+
+.main-secondary{
+    background-color: rgba(19, 19, 19, 0.89);
+    height:50px;
+}
+
+.main-nav{
+    padding: 40px;
+    text-align: right;
+    margin-left: auto;
+    border-radius: 5px;
+    font-family: 'Segoe UI';
+    font-size: 120%
+}
+
+.main-nav a{
+    padding-right:20px;
+}
+
+.main-form label {
+    font-family: 'Segoe UI';
+    font-size: 130%;
+    color: whitesmoke;
+}
+
+button[type=submit] {
+    background-color: #BB1846;
+    color: whitesmoke;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type=submit]:hover {
+    background-color: #FFFFAA;
+    color: black;
+}
+
+.main-form {
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: #414042;
+    padding: 15px;
+    margin-bottom:15px;
+}
+
+input[type=text], textarea  {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */ 
+    resize: vertical
+}
+
+footer{
+    background-color:rgba(19, 19, 19, 0.924);
+    padding-bottom: 50px;
+    padding-top: 20px;
+    padding-left:20px;
+    padding-right:20px;
+    margin:0,0;
+}
+
+footer a,p,li {
+    color:white;
+    font-size: 120%;
+}
+
+.copyright{
+    float: right;
+}
+

@@ -8,68 +8,83 @@
     <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
     <title>JKed | Επικοινωνία</title>
     <link rel="shortcut icon" href="images/fav/favicon-32x32.png" type="image/png">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylek.css">
 </head>
 <body >
 
-    <div class="toppage">
-        <img src="images/fav/android-chrome-512x512.png" class="center">
-    
-    </div>
+        <header>
+            <div class = "wrap">
+                <a href=index.html> <img class="logo" src="images/fav/newlogo.png"> </a>
 
-    <nav id="mainnav">
-        <a href="index.html">ΚΎΡΙΑ ΣΕΛΙΔΑ</a>
-        <a href="about.html">ΣΧΕΤΙΚΑ ΜΕ ΕΜΑΣ</a>
-        <a href="courses.html">ΜΑΘΗΜΑΤΑ</a>
-        <a href="contactus.html">ΕΠΙΚΟΙΝΩΝΙΑ</a>
-    </nav>
-    <hr>
-        <h2>Επικοινωνήστε μαζί μας:</h2>
-
-        <form id="mainform" method="post" action="" autocomplete="on">
-            <fieldset>
-                <div>
-                    <label for="Name">Ονοματεπώνυμο:</label>
-                    <div>
-                        <input type="text" id="Name" name="Name" required>
-                    </div>
+                <div class = "main-nav">
+                    <nav id="main-nav">
+                        <a href="index.html">ΚΥΡΙΑ ΣΕΛΙΔΑ</a> 
+                        <a href="about.html">ΣΧΕΤΙΚΑ ΜΕ ΕΜΑΣ</a> 
+                        <a href="courses.html">ΜΑΘΗΜΑΤΑ</a> 
+                        <a href="contactus.html">ΕΠΙΚΟΙΝΩΝΙΑ</a>
+                    </nav>
                 </div>
-    
-                <div>
-                    <label for="Email">Διεύθυνση Email: </label>
-                    <div class="input-group">
-                        <input type="email" id="Email" name="Email" required>
-                    </div>
-                </div>
-    
-                <div>
-                    <label for="Message">Το μήνυμα σας:</label>
-                    <div class="fcf-input-group">
-                        <textarea id="Message" name="Message" rows="15" maxlength="3000" required></textarea>
-                    </div>
-                </div>
-    
-                <div>
-                  <button type="submit" id="button">Αποστολή</button>
-                </div>
-            </fieldset>
-        </form>
+            </div>
+        </header>
+
+        <div class="main">
+
+            <div class="main-intro">
+                <p>Για οποιαδήποτε πληροφορία χρειάζεστε, είμαστε στη διάθεση σας!</p>
+                <p>Επικοινωνήστε μαζί μας:</p>
+            </div>
+
+            <div class="main-secondary"></div>
+
+            <div class="wrap">
+
+                <form class="main-form" method="post" action="" autocomplete="on">
+                    <fieldset>
+                        <div class= "form-name">
+                            <label for="Name">Ονοματεπώνυμο:</label>
+                            <div>
+                                <input type="text" id="Name" name="Name" required>
+                            </div>
+                        </div>
+            
+                        <div class= "form-address">
+                            <label for="Email">Διεύθυνση email: </label>
+                            <div class="input-group">
+                                <input type="text" id="Email" name="Email" required>
+                            </div>
+                        </div>
+            
+                        <div class= "form-message">
+                            <label for="Message">Το μήνυμα σας:</label>
+                            <div class="message-input">
+                                <textarea name="Message" rows="30" maxlength="3000" required></textarea>
+                            </div>
+                        </div>
+            
+                        <div class = "form-button">
+                            <button type="submit">Αποστολή</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>         
+        </div>
 
 
-        <hr>
-        <footer>
-                <a>Εναλλακτικοί τρόποι επικοινωνίας:</a>
     
-                <ul>
-                    <li><a>Τηλ.  2109999999</a></li>
-                    <li><a href= "mailto:  info@jked.gr">Email: info@jked.gr</a></li>
-                    <li><a href="https://www.facebook.com/" target="_blank"> Facebook </a>|</li>
-                    <li><a href="https://twitter.com/" target="_blank">Twitter </a>|</li>
-                </ul>
-        
-                <p>© 2021 JKed. All rights reserved.</p>
-        </footer> 
-
+            <footer>
+                <div class="wrap">
+                    <p>Εναλλακτικοί τρόποι επικοινωνίας:</p>
+                        
+                    <ul>
+                        <li>Τηλ.  2109999999</li>
+                        <li><a href= "mailto:  info@jked.gr">Email: info@jked.gr</a></li>
+                        <li><a href="https://www.facebook.com/" target="_blank"> Facebook </a></li>
+                        <li><a href="https://twitter.com/" target="_blank">Twitter </a></li>
+                    </ul>
+            
+                    <p class="copyright">© 2021 JKed. All rights reserved.</p>
+                </div>
+            </footer>        
 </body>
 
 </html>
