@@ -3,8 +3,8 @@ body {
     background-color: whitesmoke; 
     margin:0;
     padding:0;
-
 }
+
 
 header{
     background-color: rgba(19, 19, 19, 0.89); 
@@ -44,6 +44,7 @@ body a:active{ /* allazw xrwma se ola ta a thn wra pou clickarw*/
     padding-top:4px;
     padding-left:10px;
     float:left; /* stoixish aristera */
+    position:absolute;
 }
 
 .main-nav{ /* klash gia to main navigation menu*/
@@ -61,7 +62,8 @@ body a:active{ /* allazw xrwma se ola ta a thn wra pou clickarw*/
 
 .main-nav a:hover{ /* vazw ena gri background otan kanw hover ta menu items*/
     background-color:grey;
-    border-radius: 50px;
+    border-radius: 20px;
+    transition: .2s ease-out;
 }
 
 .main-form label { /* text configuration gia th forma*/
@@ -93,22 +95,27 @@ body a:active{ /* allazw xrwma se ola ta a thn wra pou clickarw*/
     text-shadow: 1px 1px 1px black;
 }
 
-.main-intro.index{ /* aparaithto gia allagh eikonas kai blend mode se diaforetikes selides */
+.main-intro.cpp {
+    background-image: url(images/cpp1.jpeg);
+    background-blend-mode:screen;
+}
+
+.main-intro.index{ /*  gia allagh eikonas kai blend mode se diaforetikes selides */
     background-image: url(images/index-main-3.jpg);
     background-blend-mode:screen;
 }
 
-.main-intro.courses{ /* aparaithto gia allagh eikonas kai blend mode se diaforetikes selides */
+.main-intro.courses{ /*  gia allagh eikonas kai blend mode se diaforetikes selides */
     background-image: url(images/courses-main-2.jpg);
     background-blend-mode:screen;
 }
 
-.main-intro.about{ /* aparaithto gia allagh eikonas kai blend mode se diaforetikes selides */
+.main-intro.about{ /*  gia allagh eikonas kai blend mode se diaforetikes selides */
     background-image: url(images/students2.jpg);
     background-blend-mode:screen;
 }
 
-.main-intro.about p{  /* aparaithto gia allagh font kai color se diaforetikes selides */
+.main-intro.about p{  /*  gia allagh font kai color se diaforetikes selides */
     padding:50px;
     color:rgba(19, 19, 19, 0.924);
     text-shadow: 1px 1px 1px white;
@@ -127,7 +134,7 @@ body a:active{ /* allazw xrwma se ola ta a thn wra pou clickarw*/
     margin-bottom:15px;
 }
 
-button[type=submit] , button[type="text"]{ /* customization tou button ths formas */
+button[type=submit] , button[type="text"]{ /* customization kapown buttons */
     background-color: #BB1846;
     color: whitesmoke;
     padding: 12px 20px;
@@ -169,7 +176,7 @@ input[type=text], textarea  {
     font-size: xX-large;
     color:#BB1846;
     font-family: fantasy; 
-    text-shadow: 1px 1px 1px black;
+    text-shadow: -1px 1px 0px black;
 }
 
 .text-sub { /* aplo text tou about */
@@ -179,11 +186,12 @@ input[type=text], textarea  {
 }
 
 .text-names { /* member text tou about */
-    color:black;
+    color:#414042;
     font-weight: bold;
     font-family:'Times New Roman', Times, serif;
     text-align: center;
     text-decoration:underline;
+    font-size: x-large;
 }
 
 .our-team img{ /* image customization gia ta members */
@@ -267,7 +275,7 @@ footer a,p,li {
 
 
 /*class for ol list*/
-  ol {
+  .custom-list {
     counter-reset: li;  /*creates a counter for each li element*/
     list-style: none;  /*list has no style*/
     padding: 0;        /*list has default padding*/
@@ -276,7 +284,7 @@ footer a,p,li {
 
 
   /*class for a elements of unordered list*/
-  ol a {
+  .custom-list a {
     position: relative;
     display: block; /*Displays an element as a block element */
     padding: .4em .4em .4em 2em; /*creating space around an element*/
@@ -292,14 +300,30 @@ footer a,p,li {
     margin-top:1em; /*adds top margin*/
   }
 
+  .custom-list p {
+    position: relative;
+    display: block; /*Displays an element as a block element */
+    padding: .4em .4em .4em 2em; /*creating space around an element*/
+    margin: auto; /*space around element is calculated by browser*/
+    background: whitesmoke;
+    width: 90%; /*width of an element*/
+    color: #414042; /*color of an element*/    
+    text-decoration: none; /*no decoration for text*/
+    transition: .3s ease-out; /*specifies a transition effect with a slow end*/
+    border-radius: .3em; /*adds rounded corners to border*/
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+    font-size:  large;
+    margin-top:1em; /*adds top margin*/
+  }
+
 
 /*this class is used to add the number to the ol list*/
-  ol a:before {
+.custom-list a::before, .custom-list p::before{
     content: counter(li); /*returns a counter before the main element*/
     counter-increment: li; /*increases the counter*/
     position: absolute; /*position  relative to its first positioned element*/
-    left: -0.5em; /*-0.5 em to the left*/
-    top: 50%; /*add top space*/
+    left: -1em; /*-0.5 em to the left*/
+    top: 55%; /*add top space*/
     margin-top: -1.3em; /*leave space around elements*/
     background: #f9dd94; /*background color for the counter*/
     height: 2em; /*adds height to counter*/
@@ -312,10 +336,10 @@ footer a,p,li {
     
   }
   
-  ol a:hover { background: #E9E4E0; } /*adds hover color*/
+  .custom-list a:hover { background: #E9E4E0; } /*adds hover color*/
   
   /*adds color, font family, and margin for header in list*/
-  ol h3{
+  .custom-list h3{
       color: #414042;
       font-family: fantasy; 
       margin: 100px 0 50px 0;
@@ -323,15 +347,24 @@ footer a,p,li {
      
   }
 /*adds border color, width, and height for img in list*/
-  ol img{
+.custom-list img{
     border: 5px solid #414042; 
     width: 550px;
     height: auto;
   }
-  
- 
 
+.course a:link{
+    color:#BB1846;
+}
 
+.course a[href^="http"]::after {
+    font-family: 'Font Awesome 5 Free';
+    content: "\f35d";
+    font-weight:900;
+    font-size:.8em;
+    padding-left:2px;
+}
 
-
-
+.course img{
+    width:100%;
+}
