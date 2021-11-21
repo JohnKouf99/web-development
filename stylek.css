@@ -6,6 +6,13 @@ body {
 }
 
 
+:root {
+    --red: #BB1846;
+    --smoke: #414042;
+    --white: whitesmoke;
+  }
+
+
 header{
     background-color: rgba(19, 19, 19, 0.89); 
     padding-top: 0px;
@@ -18,25 +25,38 @@ header{
 }
 
 .wrap{ /* gia thn estiash ths selidas h oloklhrwn div sto kentro */
-    max-width: 1300px;
+    max-width: 1000px;
     margin: auto;
 }
 
-body a:hover{ /* allazw xrwma se ola ta a elements otan kanw hober */
-    color:#BB1846;
+
+
+
+ 
+
+li > a:link,a:link {  
+    color: var(--red);
 }
 
-body a:link { /* allazw xrwma se ola ta a links*/
-    color: whitesmoke;
+li > a:visited,a:visited{
+    color: purple;
 }
 
-body a:visited { /* allazw xrwma se ola ta a visited links */
-    color:#BB1846;
+ li > a:hover,a:hover {
+    color: blue;
 }
 
-body a:active{ /* allazw xrwma se ola ta a thn wra pou clickarw*/
-    color:#414042;
-}
+li > a:active,a:active {
+    color: var(--white);
+  }
+  
+
+
+
+
+
+
+
 
 .logo { /* klash gia to logo ths selidas panw aristera*/
     width: 210px;
@@ -69,12 +89,12 @@ body a:active{ /* allazw xrwma se ola ta a thn wra pou clickarw*/
 .main-form label { /* text configuration gia th forma*/
     font-family: 'Segoe UI';
     font-size: 130%;
-    color: whitesmoke;
+    color: var(--white);
 }
 
 .main-intro { /* klash gia to prwto meros kathe selidas kai to merge enos background color kai enos bacground image */
     padding: 30px;
-    background-color:#BB1846;  /*color */
+    background-color:var(--red);  /*color */
     background-image: url(images/crowd.jpg); /* background image */
     background-size:cover;  /*sizarw thn eikona na kanei cover to element mou*/                     
     background-repeat:no-repeat; /*de thelw na epanalamvanetai*/
@@ -91,12 +111,22 @@ body a:active{ /* allazw xrwma se ola ta a thn wra pou clickarw*/
     font-size: 200%;
     text-align: center;
     font-weight: bold;
-    color:whitesmoke;
+    color:var(--white);
     text-shadow: 1px 1px 1px black;
 }
 
 .main-intro.cpp {
-    background-image: url(images/cpp1.jpeg);
+    background-image: url(images/cpp-main.png);
+    background-blend-mode:screen;
+}
+
+.main-intro.chinese {
+    background-image: url(images/main-chinese.jpg);
+    background-blend-mode:screen;
+}
+
+.main-intro.arts {
+    background-image: url(images/main-arts.png);
     background-blend-mode:screen;
 }
 
@@ -129,13 +159,13 @@ body a:active{ /* allazw xrwma se ola ta a thn wra pou clickarw*/
 .main-form { 
     margin-top: 20px;
     border-radius: 5px;
-    background-color: #414042;
+    background-color: var(--smoke);
     padding: 15px;
     margin-bottom:15px;
 }
 
 button[type=submit] , button[type="text"]{ /* customization kapown buttons */
-    background-color: #BB1846;
+    background-color: var(--red);
     color: whitesmoke;
     padding: 12px 20px;
     border: none;
@@ -166,7 +196,7 @@ input[type=text], textarea  {
 .text-head-white { /* main headings tou about */
     font-weight:bold;
     font-size: xX-large;
-    color:whitesmoke;
+    color:var(--white);
     font-family: fantasy;
     text-shadow: 1px 1px 1px black 
 }
@@ -174,7 +204,7 @@ input[type=text], textarea  {
 .text-head { /* main headings tou about */
     font-weight:bold;
     font-size: xX-large;
-    color:#BB1846;
+    color:var(--red);
     font-family: fantasy; 
     text-shadow: -1px 1px 0px black;
 }
@@ -186,7 +216,7 @@ input[type=text], textarea  {
 }
 
 .text-names { /* member text tou about */
-    color:#414042;
+    color:var(--smoke);
     font-weight: bold;
     font-family:'Times New Roman', Times, serif;
     text-align: center;
@@ -230,7 +260,7 @@ footer { /* for spacing purposes */
 
 footer a,p,li { 
     color:white;
-    font-size: 120%;
+    font-size: 110%;
 }
 
 
@@ -245,8 +275,8 @@ footer a,p,li {
 
 /*sets a background color and border in index page for the top courses section*/
 .top-courses{
-    background-color:#BB1846;
-    border: 5px solid #414042;    
+    background-color:var(--red);
+    border: 5px solid var(--smoke);    
     
 }
 
@@ -258,7 +288,7 @@ footer a,p,li {
 
 /**/
 .top-courses-text{
-  color: whitesmoke;
+  color:var(--white);
   position: absolute;
   top: 80%;
   left: 50%;
@@ -289,9 +319,9 @@ footer a,p,li {
     display: block; /*Displays an element as a block element */
     padding: .4em .4em .4em 2em; /*creating space around an element*/
     margin: auto; /*space around element is calculated by browser*/
-    background: whitesmoke;
+    background: var(--white);
     width: 25%; /*width of an element*/
-    color: #414042; /*color of an element*/    
+    color: var(--smoke); /*color of an element*/    
     text-decoration: none; /*no decoration for text*/
     transition: .3s ease-out; /*specifies a transition effect with a slow end*/
     border-radius: .3em; /*adds rounded corners to border*/
@@ -305,9 +335,9 @@ footer a,p,li {
     display: block; /*Displays an element as a block element */
     padding: .4em .4em .4em 2em; /*creating space around an element*/
     margin: auto; /*space around element is calculated by browser*/
-    background: whitesmoke;
+    background: var(--white);
     width: 90%; /*width of an element*/
-    color: #414042; /*color of an element*/    
+    color: var(--smoke); /*color of an element*/    
     text-decoration: none; /*no decoration for text*/
     transition: .3s ease-out; /*specifies a transition effect with a slow end*/
     border-radius: .3em; /*adds rounded corners to border*/
@@ -329,7 +359,7 @@ footer a,p,li {
     height: 2em; /*adds height to counter*/
     width: 2em; /*adds width to counter*/
     line-height: 2em; /*specifies the height of a line.*/
-    border: .2em solid #BB1846; /*border for counter circle*/
+    border: .2em solid var(--red); /*border for counter circle*/
     text-align: center; 
     font-weight: bold;
     border-radius: 2em; /*transforms the border into a circle*/
@@ -340,7 +370,7 @@ footer a,p,li {
   
   /*adds color, font family, and margin for header in list*/
   .custom-list h3{
-      color: #414042;
+      color: var(--smoke);
       font-family: fantasy; 
       margin: 100px 0 50px 0;
       text-shadow: 0.5px 2px black;
@@ -348,13 +378,13 @@ footer a,p,li {
   }
 /*adds border color, width, and height for img in list*/
 .custom-list img{
-    border: 5px solid #414042; 
+    border: 5px solid var(--smoke); 
     width: 550px;
     height: auto;
   }
 
 .course a:link{
-    color:#BB1846;
+    color:var(--red);
 }
 
 .course a[href^="http"]::after {
@@ -365,6 +395,11 @@ footer a,p,li {
     padding-left:2px;
 }
 
-.course img{
-    width:100%;
+.course-img{
+    width:70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px solid var(--smoke);
+    margin-top: 150px;
 }
