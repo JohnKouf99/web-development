@@ -10,11 +10,23 @@ body {
     --red: #BB1846;
     --smoke: #414042;
     --white: whitesmoke;
+    --black89: rgba(19, 19, 19, 0.89); 
+    --black924:rgba(19, 19, 19, 0.924);
   }
+
+  @font-face {
+      font-family: 'main';
+      src: url(fonts/NotoSans-Regular.ttf);
+  }
+
+  @font-face {
+    font-family: 'ubuntu';
+    src: url(fonts/Ubuntu-Regular.ttf);
+}
 
 
 header{
-    background-color: rgba(19, 19, 19, 0.89); 
+    background-color: var(--black89);
     padding-top: 0px;
     margin-top: 0px;
 }
@@ -27,6 +39,46 @@ header{
 .wrap{ /* gia thn estiash ths selidas h oloklhrwn div sto kentro */
     max-width: 1000px;
     margin: auto;
+}
+
+
+/*used for grid layout in fields section */
+.field-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+/*used for flex layout in courses section*/
+.course-wrapper{
+    display: flex;  
+    flex-direction: column;
+    flex-wrap: wrap;     
+}
+
+
+.course-wrapper  div img{
+    display: block;/*???????*/
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 100px; 
+    width:40%;
+    border: 5px solid var(--smoke);      
+}
+
+.course-wrapper div p, .course-wrapper div ul{
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+    
 }
 
 
@@ -72,7 +124,7 @@ li > a:active,a:active {
     text-align: right;
     margin-left: auto;
     border-radius: 5px;
-    font-family: 'Segoe UI';
+    font-family: 'ubuntu'; /*'Segoe UI';*/
     font-size: 120%
 }
 
@@ -87,7 +139,7 @@ li > a:active,a:active {
 }
 
 .main-form label { /* text configuration gia th forma*/
-    font-family: 'Segoe UI';
+    font-family: 'ubuntu'; /*'Segoe UI';*/
     font-size: 130%;
     color: var(--white);
 }
@@ -107,7 +159,7 @@ li > a:active,a:active {
 .main-intro p{ /*font configuration gia to main intro */
     margin:auto;
     padding:80px;
-    font-family: 'Segoe UI';
+    font-family: 'ubuntu'; /*'Segoe UI';*/
     font-size: 200%;
     text-align: center;
     font-weight: bold;
@@ -147,12 +199,12 @@ li > a:active,a:active {
 
 .main-intro.about p{  /*  gia allagh font kai color se diaforetikes selides */
     padding:50px;
-    color:rgba(19, 19, 19, 0.924);
+    color:var(--black924);
     text-shadow: 1px 1px 1px white;
 }
 
 .secondary{ /* klash gia mia gri bara katw apo to main-intro */
-    background-color: rgba(19, 19, 19, 0.89);
+    background-color: var(--black89);
     height:50px;
 }
 
@@ -210,8 +262,8 @@ input[type=text], textarea  {
 }
 
 .text-sub { /* aplo text tou about */
-    color:rgba(19, 19, 19, 0.924);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:var(--black924);
+    font-family: 'main';/*'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;*/
     font-size:large;
 }
 
@@ -250,7 +302,7 @@ input[type=text], textarea  {
 }
 
 footer { /* for spacing purposes */
-    background-color:rgba(19, 19, 19, 0.924);
+    background-color:var(--black924);
     padding-bottom: 50px;
     padding-top: 20px;
     padding-left:20px;
@@ -293,7 +345,7 @@ footer a,p,li {
   top: 80%;
   left: 50%;
   transform: translate(-50%, -50%); 
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'main'; /*'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;*/
   font-size:large;
 }
 
@@ -325,7 +377,7 @@ footer a,p,li {
     text-decoration: none; /*no decoration for text*/
     transition: .3s ease-out; /*specifies a transition effect with a slow end*/
     border-radius: .3em; /*adds rounded corners to border*/
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+    font-family:'main'; /* 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
     font-size:  large;
     margin-top:1em; /*adds top margin*/
   }
@@ -341,7 +393,7 @@ footer a,p,li {
     text-decoration: none; /*no decoration for text*/
     transition: .3s ease-out; /*specifies a transition effect with a slow end*/
     border-radius: .3em; /*adds rounded corners to border*/
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+    font-family:'main'; /* 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
     font-size:  large;
     margin-top:1em; /*adds top margin*/
   }
@@ -395,11 +447,3 @@ footer a,p,li {
     padding-left:2px;
 }
 
-.course-img{
-    width:70%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border: 5px solid var(--smoke);
-    margin-top: 150px;
-}
