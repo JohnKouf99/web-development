@@ -32,8 +32,8 @@ header{
 }
 
 .index-img{
-    width: 150;
-    height:150;
+    width: 150px;
+    height:150px;
 }
 
 .wrap{ /* gia thn estiash ths selidas h oloklhrwn div sto kentro */
@@ -445,5 +445,14 @@ footer a,p,li {
     font-weight:900;
     font-size:.8em;
     padding-left:2px;
+}
+
+.course-img{
+    width:70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px solid var(--smoke);
+    margin-top: 150px;
 }
 
