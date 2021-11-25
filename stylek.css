@@ -313,7 +313,7 @@ input[type=text], textarea  {
     font-weight:bold;
     font-size: xX-large;
     color:var(--white);
-    font-family: fantasy;
+    font-family: 'main'; 
     text-shadow: 1px 1px 1px black 
 }
 
@@ -321,7 +321,7 @@ input[type=text], textarea  {
     font-weight:bold;
     font-size: xX-large;
     color:var(--red);
-    font-family: fantasy; 
+    font-family: 'main'; 
     text-shadow: -1px 1px 0px black;
 }
 
@@ -483,7 +483,7 @@ footer a,p,li {
   /*adds color, font family, and margin for header in list*/
   .custom-list h3{
       color: var(--smoke);
-      font-family: fantasy; 
+      font-family: 'main'; 
       margin: 100px 0 50px 0;
       text-shadow: 0.5px 2px black;
      
@@ -500,7 +500,7 @@ footer a,p,li {
 }
 
 .course-wrapper a[href^="http"]::after {
-    font-family: 'Font Awesome 5 Free';
+    font-family: 'main'; 
     content: "\f35d";
     font-weight:900;
     font-size:.8em;
