@@ -96,25 +96,28 @@ body {
     flex-wrap: wrap;     
 }
 
-
-.course-wrapper  div img{
+/*used for image editing in courses-list*/
+.course-wrapper  div img {
     display: block;/*???????*/
-    margin-right: auto;
-    margin-left: auto;
+    float: right;
     margin-top: 100px; 
     width:40%;
-    border: 5px solid var(--smoke);      
-}
-
-.course-wrapper div p, .course-wrapper div ul{
-    width: 70%;
-    margin-right: auto;
-    margin-left: auto;
+    border: 5px solid var(--smoke);    
+    margin-right: 20px;  
+    margin-left: 20px;
+    height: 100%;
     
 }
 
+/*used for text editing in courses-list*/
+.course-wrapper div p,  .course-wrapper div ul{
+    float: left;
+    margin-left: 20px;
+    width: 55%;  
+}
 
 
+/*we used variables for specific colors*/
 :root {
     --red: #BB1846;
     --smoke: #414042;
@@ -123,6 +126,7 @@ body {
     --black924:rgba(19, 19, 19, 0.924);
   }
 
+  
   @font-face {
       font-family: 'main';
       src: url(fonts/NotoSans-Regular.ttf);
@@ -148,7 +152,7 @@ header{
 
 
  
-
+/*hyperlink specifications*/
 li > a:link,a:link {  
     color: var(--red);
 }
@@ -227,16 +231,17 @@ li > a:active,a:active {
     text-shadow: 1px 1px 1px black;
 }
 
+/*adds image and background mode to cpp.html's header*/
 .main-intro.cpp {
     background-image: url(images/cpp-main.png);
     background-blend-mode:screen;
 }
-
+/*adds image and background mode to chinese.html's header*/
 .main-intro.chinese {
     background-image: url(images/main-chinese.jpg);
     background-blend-mode:screen;
 }
-
+/*adds image and background mode to arts.html's header*/
 .main-intro.arts {
     background-image: url(images/main-arts.png);
     background-blend-mode:screen;
