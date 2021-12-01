@@ -354,19 +354,15 @@ input[type=text], textarea  {
 }
 
 /*De ta xreiazomaste giati xrisimopoioume flexbox
-
 .our-team > .members-align:nth-child(2n-1) > img{  stoixizw aristera kathe allo paidi ksekinontas apo to 2o
     float:left;
 }
-
 .our-team > .members-align:nth-child(2n) > img { /* stoixizw deksia kathe allo paidi ksekinontas apo to 1o 
     float:right;
 }
-
 .our-team p{ /* for spacing purposes 
     padding:40px;
 }
-
 .members-align { /* for spacing purposes 
     width:100%;
     height: 500px;
@@ -511,4 +507,3 @@ footer a,p,li {
     font-size:.8em;
     padding-left:2px;
 }
-
