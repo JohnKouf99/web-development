@@ -34,31 +34,56 @@ body {
     grid-area: footer;
 }
 
-.index-main-grid{ /*index main content grip*/
+.index-main-grid{ /*DESKTOP 3 STHLES*/
     display:grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
+    grid-auto-rows:minmax(100px,auto);
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr .5fr .4fr .5fr;
+    grid-template-areas:
+
+    "icon1 icon2 icon3"
+    "start-now start-now start-now"
+    "title title title"
+    "courses courses courses";
 }
+
 
 .index-main-grid-item-1{
     justify-self: center;
+    grid-area: icon1; 
 }
 
 .index-main-grid-item-2{
     justify-self: center;
+    grid-area: icon2;
 }
 
 .index-main-grid-item-3{
     justify-self: center;
+    grid-area: icon3;
+}
+
+.index-main-grid-item-4{
+    grid-area: start-now;
 }
 
 .index-main-grid-item-5{
     justify-self: center;
+    grid-area: title;
+}
+
+.index-main-grid-item-6{
+    grid-area: courses;
 }
 
 .flex-container{ /*flex container class gia footer kai header*/
     display:flex;
+    flex-direction: row;
     justify-content: space-around;
+}
+
+.container-flex-item{
+    display:inline;
 }
 
 .flex-container .footer-flex-item-2{ 
@@ -69,7 +94,8 @@ body {
 .about-flex-container{
     display:flex;
     align-items: center;
-    padding:20px;
+    padding:30px;
+    column-gap: 7em;
     flex-wrap:nowrap;
 }
 
@@ -82,23 +108,92 @@ body {
 }
 
 /*used for grid layout in fields section */
-.field-wrapper{
+.field-wrapper{ /*grid gia content courses*/
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     text-align: center;
 }
 
 
 /*used for flex layout in courses section*/
 .course-wrapper{
-    display: flex;  
-    flex-direction: column;
-    flex-wrap: wrap;     
+    display:grid;
+    grid-template-columns: 1fr 0.5fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+
+   "text1 image1"
+   "text2 image2"
+   "text3 image3"
+   "text4 image4"
+   "text5 image5";
+}
+.grid-image{
+    text-align: center;
 }
 
-/*used for image editing in courses-list*/
+.grid-image img{
+    width:75%;
+    height:60%;
+    border: 5px solid var(--smoke); 
+    margin-top: 16%;   
+}
+
+
+.grid-courses-item-1{
+    grid-area: image1;
+
+}
+
+.grid-courses-item-2{
+    grid-area: text1;
+    margin-left: 2em;
+}
+
+.grid-courses-item-3{
+    grid-area: image2;
+}
+
+.grid-courses-item-4{
+
+    grid-area: text2;
+    margin-left: 2em;
+}
+
+.grid-courses-item-5{
+    grid-area: image3;
+}
+
+.grid-courses-item-6{
+    grid-area: text3;
+    margin-left: 2em;
+}
+
+.grid-courses-item-7{
+    grid-area: image4;
+}
+
+.grid-courses-item-8{
+    grid-area: text4;
+    margin-left: 2em;
+}
+
+.grid-courses-item-9{
+    grid-area: image5;
+}
+
+.grid-courses-item-10{
+    grid-area: text5;
+    margin-left: 2em;
+}
+
+
+
+
+/*used for image editing in courses-list
 .course-wrapper  div img {
-    display: block;/*???????*/
+    display: block;/*???????
     float: right;
     margin-top: 100px; 
     width:40%;
@@ -107,18 +202,20 @@ body {
     margin-left: 20px;
     height: 100%;
     
-}
+}*/
 
-/*used for text editing in courses-list*/
+/*used for text editing in courses-list
 .course-wrapper div p,  .course-wrapper div ul{
     float: left;
     margin-left: 20px;
     width: 55%;  
-}
+}*/
 
 
 /*we used variables for specific colors*/
 :root {
+
+    --light:#FFFFAA;
     --red: #BB1846;
     --smoke: #414042;
     --white: whitesmoke;
@@ -127,12 +224,12 @@ body {
   }
 
   
-  @font-face {
+@font-face {
       font-family: 'main';
       src: url(fonts/NotoSans-Regular.ttf);
-  }
+}
 
-  @font-face {
+@font-face {
     font-family: 'ubuntu';
     src: url(fonts/Ubuntu-Regular.ttf);
 }
@@ -162,19 +259,12 @@ li > a:visited,a:visited{
 }
 
  li > a:hover,a:hover {
-    color: blue;
+    color: var(--light);
 }
 
 li > a:active,a:active {
     color: var(--white);
-  }
-  
-
-
-
-
-
-
+}
 
 
 .logo { /* klash gia to logo ths selidas panw aristera*/
@@ -186,7 +276,7 @@ li > a:active,a:active {
 
 .main-nav{ /* klash gia to main navigation menu*/
     padding: 40px;
-    text-align: right;
+    text-align: center;
     border-radius: 5px;
     font-family: 'ubuntu'; /*'Segoe UI';*/
     font-size: 120%
@@ -285,6 +375,16 @@ li > a:active,a:active {
     width:50%;
 }
 
+.index-start-now{
+    margin:auto;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: var(--smoke);
+    padding: 15px;
+    margin-bottom:15px;
+}
+
 button[type=submit] , button[type="text"]{ /* customization kapown buttons */
     background-color: var(--red);
     color: whitesmoke;
@@ -295,7 +395,7 @@ button[type=submit] , button[type="text"]{ /* customization kapown buttons */
 }
 
 button[type=submit]:hover , button[type="text"]:hover { /* customization tou button ths formas sto hover */
-    background-color: #FFFFAA;
+    background-color: var(--light);
     color: black;
 }
 
@@ -334,6 +434,16 @@ input[type=text], textarea  {
     color:var(--black924);
     font-family: 'main';/*'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;*/
     font-size:large;
+}
+
+.text-utility-width{
+    width:80%;
+    margin:auto;
+}
+
+.text-utility-about-width{
+    width:70%;
+    margin:auto;
 }
 
 .text-names { /* member text tou about */
@@ -383,9 +493,6 @@ footer a,p,li {
 }
 
 
-
-
-
 /*sets a background color and border in index page for the top courses section*/
 .top-courses{
     background-color:var(--red);
@@ -433,7 +540,7 @@ footer a,p,li {
     padding: .4em .4em .4em 2em; /*creating space around an element*/
     margin: auto; /*space around element is calculated by browser*/
     background: var(--white);
-    width: 25%; /*width of an element*/
+    width: 35%; /*width of an element*/
     color: var(--smoke); /*color of an element*/    
     text-decoration: none; /*no decoration for text*/
     transition: .3s ease-out; /*specifies a transition effect with a slow end*/
@@ -446,7 +553,7 @@ footer a,p,li {
   .custom-list p {
     position: relative;
     display: block; /*Displays an element as a block element */
-    padding: .4em .4em .4em 2em; /*creating space around an element*/
+    padding: .4em .4em .4em 4em; /*creating space around an element*/
     margin: auto; /*space around element is calculated by browser*/
     background: var(--white);
     width: 90%; /*width of an element*/
@@ -479,7 +586,11 @@ footer a,p,li {
     
   }
   
-  .custom-list a:hover { background: #E9E4E0; } /*adds hover color*/
+  .custom-list a:hover { 
+      background: #E9E4E0; 
+      width:40%;
+    
+    } /*adds hover color*/
   
   /*adds color, font family, and margin for header in list*/
   .custom-list h3{
@@ -506,4 +617,108 @@ footer a,p,li {
     font-weight:900;
     font-size:.8em;
     padding-left:2px;
+}
+
+@media only screen and (max-width: 600px){ /*KINITO 1 STHLH*/
+    .index-main-grid{ 
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr .5fr .4fr .5fr;
+        grid-template-areas:
+    
+        "icon1"
+        "icon2"
+        "icon3"
+        "start-now"
+        "title"
+        "courses"
+    }
+
+    .field-wrapper{ /*grid gia content courses*/
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        text-align: center;
+    }
+
+    .flex-container{ /*kinito: responsive flexbox sto header gia to nav*/
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container-flex-item{/*kinito: responsive flexbox sto header gia to nav */
+        display: flex; /*kathe flexbox item einai flexbox gia spacing purposes*/
+        text-align: center;
+        justify-content: center;
+    }
+
+    .about-flex-container{ /*kinito: about members allazw to align se column*/
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        padding:30px;
+        column-gap: 7em;
+        flex-wrap:nowrap;
+    }
+
+    .main-nav a:hover{ /* vazw ena gri background otan kanw hover ta menu items*/
+        background-color:grey;
+        width:100%;
+        border-radius: 50px;
+        transition: .2s ease-out;
+    }
+
+}
+
+@media only screen and (max-width: 1200px) and (min-width:600px) { /*TABLET 2 STHLES*/
+    .index-main-grid{ 
+
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr .5fr .4fr .5fr;
+        grid-template-areas:
+    
+        "icon1 icon2"
+        "icon3 icon3"
+        "start-now start-now"
+        "title title"
+        "courses courses"
+    }
+
+    .field-wrapper{ /*grid gia content courses*/
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        text-align: center;
+    }
+
+    .flex-container{ /*tablet: responsive flexbox sto header gia to nav*/
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container-flex-item{ /*tablet: responsive flexbox sto header gia to nav*/
+        text-align: center;
+    }
+
+}
+
+@media only screen and (max-width:1200px){ /*koino media query kai gia kinito kai gia tablet*/
+    .course-wrapper{
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+    
+       "image1"
+       "text1"
+       "image2"
+       "text2"
+       "image3"
+       "text3"
+       "image4"
+       "text4"
+       "image5"
+       "text5";
+    }
 }
