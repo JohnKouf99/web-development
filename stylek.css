@@ -120,6 +120,7 @@ body {
 .course-wrapper{
     display:grid;
     grid-template-columns: 1fr 0.5fr;
+    column-gap: 0.5%;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas:
 
@@ -134,7 +135,8 @@ body {
 }
 
 .grid-image img{
-    width:75%;
+    
+    /*max-width:100%;*/ width: 90%;
     height:60%;
     border: 5px solid var(--smoke); 
     margin-top: 16%;   
@@ -278,7 +280,7 @@ li > a:active,a:active {
     padding: 40px;
     text-align: center;
     border-radius: 5px;
-    font-family: 'ubuntu'; /*'Segoe UI';*/
+    font-family: 'ubuntu'; 
     font-size: 120%
 }
 
@@ -293,7 +295,7 @@ li > a:active,a:active {
 }
 
 .main-form label { /* text configuration gia th forma*/
-    font-family: 'ubuntu'; /*'Segoe UI';*/
+    font-family: 'ubuntu'; 
     font-size: 130%;
     color: var(--white);
 }
@@ -313,7 +315,7 @@ li > a:active,a:active {
 .main-intro p{ /*font configuration gia to main intro */
     margin:auto;
     padding:80px;
-    font-family: 'ubuntu'; /*'Segoe UI';*/
+    font-family: 'ubuntu'; 
     font-size: 200%;
     text-align: center;
     font-weight: bold;
@@ -432,7 +434,7 @@ input[type=text], textarea  {
 
 .text-sub { /* aplo text tou about */
     color:var(--black924);
-    font-family: 'main';/*'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;*/
+    font-family: 'main';
     font-size:large;
 }
 
@@ -456,7 +458,7 @@ input[type=text], textarea  {
 }
 
 .our-team img{ /* image customization gia ta members */
-    width: 300px;
+    max-width: 100%; /*width:300px*/
     height: 300px;
     padding:20px;
     margin: 20px;
@@ -513,7 +515,7 @@ footer a,p,li {
   top: 80%;
   left: 50%;
   transform: translate(-50%, -50%); 
-  font-family: 'main'; /*'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;*/
+  font-family: 'main';
   font-size:large;
 }
 
@@ -529,7 +531,7 @@ footer a,p,li {
     counter-reset: li;  /*creates a counter for each li element*/
     list-style: none;  /*list has no style*/
     padding: 0;        /*list has default padding*/
-    /*text-shadow: 0 1px 0 rgba(255,255,255,.5);*/  
+    
   }
 
 
@@ -603,7 +605,8 @@ footer a,p,li {
 /*adds border color, width, and height for img in list*/
 .custom-list img{
     border: 5px solid var(--smoke); 
-    width: 550px;
+   
+    max-width: 100%;
     height: auto;
   }
 
