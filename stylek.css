@@ -614,9 +614,9 @@ footer a,p,li {
 }
 
 .course-wrapper a[href^="http"]::after {
-    font-family: 'main'; 
-    content: "\f35d";
-    font-weight:900;
+    font-family: 'Font Awesome 5 Free'; 
+    content: " \f35d";
+    font-weight:600;
     font-size:.8em;
     padding-left:2px;
 }
