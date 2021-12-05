@@ -522,8 +522,7 @@ footer a,p,li {
 /*used in index page to include text and image in the same container*/
 .container {
     position: relative; /*keeps the layout unchanged*/
-    
-  }
+}
 
 
 /*class for ol list*/
@@ -671,6 +670,10 @@ footer a,p,li {
         transition: .2s ease-out;
     }
 
+    .top-courses-list{
+        flex-direction: column;
+    }
+    
 }
 
 @media only screen and (max-width: 1200px) and (min-width:600px) { /*TABLET 2 STHLES*/
