@@ -344,6 +344,11 @@ li > a:active,a:active {
     background-blend-mode:screen;
 }
 
+.main-intro.form {
+    background-image: url(images/subscription-image.jpeg);
+    background-blend-mode:screen;
+}
+
 .main-intro.courses{ /*  gia allagh eikonas kai blend mode se diaforetikes selides */
     background-image: url(images/courses-main-2.jpg);
     background-blend-mode:screen;
@@ -364,6 +369,25 @@ li > a:active,a:active {
 .secondary{ /* klash gia mia gri bara katw apo to main-intro */
     background-color: var(--black89);
     height:3em;
+}
+
+.registration-form{
+    margin:auto;
+    text-align: left;
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: var(--smoke);
+    padding: 15px;
+    margin-bottom:15px;
+    width:50%;
+}
+
+
+
+.registration-form label { /* text configuration gia th forma*/
+    font-family: 'ubuntu'; 
+    font-size: 130%;
+    color: var(--white);
 }
 
 .main-form { 
@@ -387,7 +411,7 @@ li > a:active,a:active {
     margin-bottom:15px;
 }
 
-button[type=submit] , button[type="text"]{ /* customization kapown buttons */
+button[type=submit] , button[type=reset], button[type="text"]{ /* customization kapown buttons */
     background-color: var(--red);
     color: whitesmoke;
     padding: 12px 20px;
@@ -396,12 +420,14 @@ button[type=submit] , button[type="text"]{ /* customization kapown buttons */
     cursor: pointer;
 }
 
-button[type=submit]:hover , button[type="text"]:hover { /* customization tou button ths formas sto hover */
+button[type=submit]:hover, button[type=reset]:hover, button[type="text"]:hover { /* customization tou buttons ths formas sto hover kai tis formas eggrafis */
     background-color: var(--light);
     color: black;
 }
 
-input[type=text], textarea  { 
+input[type=text],[type=date],[type=password],[type=tel],[type=number],[type=select], textarea,select  { 
+    font-family: 'ubuntu';
+    font-size: large;
     width: 100%; 
     padding: 12px; 
     border: 1px solid #ccc; 
@@ -410,7 +436,10 @@ input[type=text], textarea  {
     margin-top: 6px; 
     margin-bottom: 16px; 
     resize: vertical /* dinoume thn epilogh mono vertically */
+    
 }
+
+
 
 .about-text {  /* text kentrika */
     text-align: center;
