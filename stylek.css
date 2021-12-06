@@ -435,7 +435,7 @@ input[type=text],[type=date],[type=password],[type=tel],[type=number],[type=sele
     box-sizing: border-box; /*  */
     margin-top: 6px; 
     margin-bottom: 16px; 
-    resize: vertical /* dinoume thn epilogh mono vertically */
+    resize: none; /* dinoume thn epilogh mono vertically */
     
 }
 
