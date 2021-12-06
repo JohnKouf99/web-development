@@ -9,6 +9,7 @@
     <title>JKed | Επικοινωνία</title>
     <link rel="shortcut icon" href="images/favnew.png" type="image/png">
     <link rel="stylesheet" href="stylek.css">
+    <script src="myscript.js"></script>
 </head>
 <body >
 
@@ -52,9 +53,10 @@
 		
 		
 		<div class="grid-item-3">
-
-            <form class="registration-form"  method="post" action="" autocomplete="on">
+            
+            <form class="registration-form"  method="post" action="" autocomplete="on" onsubmit="event.preventDefault(); myValidity();">
                 <fieldset>
+                    <!--
                     
                     <label for='lname'>Επώνυμο:</label>
                     <input type="text" id="lname" name="lname" required>
@@ -67,11 +69,11 @@
 
                     <label for='address'>Διεύθυνση Κατοικίας: </label>
                     <input type="text" id="address" name="address" required placeholder="πχ. Pattision Street, 76 Athens">
-                    <br><br> <!--anti autou mporw na ta balw se div-->
+                    <br><br> 
 
-                    <div class="birthdate"> <!--to do-->
+                    <div class="birthdate"> 
                     <label for='birthdate'>Ημερομηνία γέννησης: </label>
-                    <input type="date" id="birthdate" name="birthdate" min="1900-01-01" max="2021-12-5"> <!--isws me select h step down,thelei css class-->
+                    <input type="date" id="birthdate" name="birthdate" min="1900-01-01" max="2021-12-5"> 
                     </div>
 
                     <br>    
@@ -88,19 +90,21 @@
                     
                     <label for='username'>Όνομα Χρήστη: </label>
                     <input type="text" id="username" name="username" required>
-                    <br><br>
+                    <br><br> -->
 
                     <div class="password">
                     <label for='pass'>Κωδικός Πρόσβασης: </label>
-                    <input type="password" id="pass" name="pass"  minlength="8" placeholder="8 characters minimum" required>
+                    <input type="password" id="pass1" name="pass1"  minlength="3" placeholder="8 characters minimum" required>
                     </div>
                     <br><br>
                     
                     <div class="password">
                     <label for="pass2">Επιβεβαίωση κωδικού πρόσβασης: </label>
-                    <input type="password" id="pass2" name="pass2" required>
+                    <input type="password" id="pass2" name="pass2" minlength="3" required>
                     </div>
                     <br><br>
+
+                    <!--
 
                     <div class="payment">
                     <label for="payment">Τρόπος Πληρωμής: </label>
@@ -114,7 +118,7 @@
 
                 <br><br><br>
 
-
+                
                 <fieldset>
                     
                     <label>Παρακαλώ για την ολοκλήρωση της εγγραφής σας, συμπληρώστε το παρακάτω ερωτηματολόγιο:</label>
@@ -198,7 +202,7 @@
                         <option value="Παραπάνω από 8 ώρες">Παραπάνω από 8 ώρες</option>
                         <option value="Δεν γνωρίζω">Δεν γνωρίζω</option>
                         </select>
-                    <br><br>
+                    <br><br> -->
                     
 
                     
@@ -207,7 +211,7 @@
                         
 
                     <div class = "about-text">
-                        <button type="submit">Ολοκλήρωση Εγγραφής</button>
+                        <button type="submit" >Ολοκλήρωση Εγγραφής</button>
                         
                         <br><br>
                         <button type="reset">Άκυρο</button>
