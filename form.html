@@ -53,7 +53,7 @@
 		
 		<div class="grid-item-3">
 
-            <form class="registration-form" action="" method="post">
+            <form class="registration-form"  method="post" action="" autocomplete="on">
                 <fieldset>
                     
                     <label for='lname'>Επώνυμο:</label>
@@ -130,14 +130,13 @@
                     <br><br><br>
 
                     <label for="occupation">Επάγγελμα:</label>
-                      <select name="occupation" id="occupation">
-                        <option disabled selected value>Επιλέξτε εδώ</option>
-                        <option value="Δημόσιος Υπάλληλος">Δημόσιος Υπάλληλος</option>
-                        <option value="Ιδιωτικός Υπάλληλος">Ιδιωτικός Υπάλληλος</option>
-                        <option value="Φοιτητής">Φοιτητής</option>
-                        <option value="Άνεργος">Άνεργος</option>
-                        <option value="Άλλο">Άλλο</option>
-                        </select>
+                    <input list="occupation-list" name="occupation" id="occupation">
+                    <datalist id="occupation-list">
+                        <option value="Δημόσιος Υπάλληλος">
+                        <option value="Ιδιωτικός Υπάλληλος">
+                        <option value="Φοιτητής">
+                        <option value="Άνεργος">
+                        </datalist>
                       <br><br>
 
                     <label for="studies">Επίπεδο σπουδών:</label>
@@ -148,20 +147,20 @@
                         <option value="Απόφοιτος ΑΕΙ">Απόφοιτος ΑΕΙ</option>
                         <option value="Απόφοιτος Μεταπτυχιακού">Απόφοιτος Μεταπτυχιακού</option>
                         <option value="Απόφοιτος Διδακτορικού">Απόφοιτος Διδακτορικού</option>
+                        <option value="Απόφοιτος Διδακτορικού">Άλλο</option>
                         </select>
                       <br><br>
 
                       <label for="course-pref">Κατεύθυνση σπουδών:</label>
-                      <select name="course-pref" id="course-pref">
-                        <option disabled selected value>Επιλέξτε εδώ</option>
-                        <option value="Θετικές Επιστήμες">Θετικές Επιστήμες</option>
-                        <option value="Ανθρωπιστικές Επιστήμες">Ανθρωπιστικές Επιστήμες</option>
-                        <option value="Επιστήμη Πληροφορικής">Επιστήμη Πληροφορικής</option>
-                        <option value="Οικονομικές Επιστήμες">Οικονομικές Επιστήμες</option>
-                        <option value="Επιστήμη Λογιστικής">Επιστήμη Λογιστικής</option>
-                        <option value="Επιστήμη Τέχνης">Επιστήμη Τέχνης</option>
-                        <option value="Άλλο">Άλλο</option>
-                        </select>
+                      <input list="course-pref-list" name="course-pref" id="course-pref">
+                      <datalist id="course-pref-list">
+                        <option value="Θετικές Επιστήμες">
+                        <option value="Ανθρωπιστικές Επιστήμες">
+                        <option value="Επιστήμη Πληροφορικής">
+                        <option value="Οικονομικές Επιστήμες">
+                        <option value="Επιστήμη Λογιστικής">
+                        <option value="Επιστήμη Τέχνης">
+                    </datalist>
                       <br><br>
 
                       <label for="graduation">Έτος αποφοίτησης:</label>
