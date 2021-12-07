@@ -58,10 +58,10 @@
                 <fieldset>
                     
                     <label for='lname'>Επώνυμο:</label>
-                    <input type="text" id="lname" name="lname" required>
+                    <input type="text" id="lname" name="lname" placeholder="PAPADOPOULOS" required>
 
                     <label for='fname'>Όνομα:</label>
-                    <input type="text" id="fname" name="fname" required> 
+                    <input type="text" id="fname" name="fname" placeholder="KOSTAS" required> 
                     <label for='Email'>Διεύθυνση email:</label>
                     <input type="text" id="email" name="Email" placeholder="example@email.com" required>
 
@@ -90,12 +90,12 @@
 
                     
                     <label for='username'>Όνομα Χρήστη: </label>
-                    <input type="text" id="username" name="username" required>
+                    <input type="text" id="username" name="username" placeholder="πχ. kostas123" required>
                     <br><br> 
 
                     <div class="password">
                     <label for='pass' id="pass1-label">Κωδικός Πρόσβασης: </label>
-                    <input type="password" id="pass1" name="pass1"  minlength="0" placeholder="8 characters minimum" required>
+                    <input type="password" id="pass1" name="pass1"  minlength="8" placeholder="8 characters minimum" required>
                     </div>
                     
                     <div class="password-error"></div>
@@ -103,7 +103,7 @@
                     
                     <div class="password">
                     <label for="pass2">Επιβεβαίωση κωδικού πρόσβασης: </label>
-                    <input type="password" id="pass2" name="pass2" minlength="0" required>
+                    <input type="password" id="pass2" name="pass2" minlength="8" placeholder="8 characters minimum" required>
                     </div>
                     <div class="password-error"></div>
                     <br><br>
@@ -184,7 +184,7 @@
                     <br><br><br>
 
                     <label for="occupation">Επάγγελμα:</label>
-                    <input list="occupation-list" name="occupation" id="occupation" required>
+                    <input list="occupation-list" name="occupation" id="occupation" placeholder="πχ. Δημόσιος Υπάλληλος" required>
                     <datalist id="occupation-list">
                         <option value="Δημόσιος Υπάλληλος">
                         <option value="Ιδιωτικός Υπάλληλος">
@@ -194,7 +194,7 @@
                       <br><br>
 
                     <label for="studies">Επίπεδο σπουδών:</label>
-                      <select name="studies" id="studies" required>
+                      <select name="studies" id="studies"  required>
                         <option disabled selected value>Επιλέξτε εδώ</option>
                         <option value="Απόφοιτος Λυκείου">Απόφοιτος Λυκείου</option>
                         <option value="Απόφοιτος ΤΕΙ">Απόφοιτος ΤΕΙ</option>
@@ -206,7 +206,7 @@
                       <br><br>
 
                       <label for="course-pref">Κατεύθυνση σπουδών:</label>
-                      <input list="course-pref-list" name="course-pref" id="course-pref" required>
+                      <input list="course-pref-list" name="course-pref" id="course-pref" placeholder="πχ. Θετικές Επιστήμες"  required>
                       <datalist id="course-pref-list">
                         <option value="Θετικές Επιστήμες">
                         <option value="Ανθρωπιστικές Επιστήμες">
