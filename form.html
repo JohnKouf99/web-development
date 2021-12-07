@@ -67,7 +67,7 @@
 
                     
                     <label for='address'>Διεύθυνση Κατοικίας: </label>
-                    <input type="text" id="address" name="address" required placeholder="πχ. Pattision Street, 76 Athens">
+                    <input type="text" id="address" name="address" placeholder="πχ. Pattision Street, 76 Athens" required>
                     <br><br>
 
                     <div class="birthdate"> 
@@ -108,15 +108,62 @@
                     <div class="password-error"></div>
                     <br><br>
 
+                </fieldset> <br><br><br>
 
+
+                <fieldset>
                     <div class="payment">
                     <label for="payment">Τρόπος Πληρωμής: </label>
-                    <input type="radio" id="payment1" Name="payment" Value ="Αντικαταβολή" required>
-                    <label for="Αντικαταβολή">Αντικαταβολή</label>
+                    <input type="radio" id="payment1" Name="payment" Value ="Χρεωστική Κάρτα" required>
+                    <label for="Χρεωστική Κάρτα">Χρεωστική Κάρτα</label>
                     <input type="radio" id="payment2" Name="payment" Value ="Πιστωτική Κάρτα">
                     <label for="Πιστωτική Κάρτα">Πιστωτική Κάρτα</label>
                     </div>
                     <br><br>
+
+
+                    <label for='card-number'>Αριθμός Κάρτας: </label>
+                    <input type="text" id="card-number" name="card-number" placeholder="πχ. 1234-5678-9999-0000"  pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}"  required>
+                    <br><br> 
+
+                    <label for='card-holder'>Όνομα Κατόχου: </label>
+                    <input type="text" id="card-holder" name="card-holder" placeholder="πχ. J.K.PAPADOPOULOS" required>
+                    <br><br> 
+
+                    <label for='username'>CVV: </label>
+                    <input type="text" id="cvv" name="cvv" pattern="[0-9]{3}" placeholder="πχ. 123" required>
+                    <br><br> 
+
+                    <label for='card-expiration'>Ημ. Λήξης: </label>
+                    <select name='expiration-month' id='expiration-month' required>
+                        <option disabled selected value>Month</option>
+                        <option value="January">January</option>
+                        <option value="February">February</option>
+                        <option value="March">March</option>
+                        <option value="April">April</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="August">August</option>
+                        <option value="September">September</option>
+                        <option value="October">October</option>
+                        <option value="November">November</option>
+                        <option value="December">December</option>
+                    </select> 
+                    <select name='expiration-year' id='expiration-year'>
+                        <option disabled selected value>Year</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                    </select> 
+                    <br><br> 
+
+
+
+
+
                 </fieldset> 
 
                 <br><br><br>
@@ -137,7 +184,7 @@
                     <br><br><br>
 
                     <label for="occupation">Επάγγελμα:</label>
-                    <input list="occupation-list" name="occupation" id="occupation">
+                    <input list="occupation-list" name="occupation" id="occupation" required>
                     <datalist id="occupation-list">
                         <option value="Δημόσιος Υπάλληλος">
                         <option value="Ιδιωτικός Υπάλληλος">
@@ -147,7 +194,7 @@
                       <br><br>
 
                     <label for="studies">Επίπεδο σπουδών:</label>
-                      <select name="studies" id="studies">
+                      <select name="studies" id="studies" required>
                         <option disabled selected value>Επιλέξτε εδώ</option>
                         <option value="Απόφοιτος Λυκείου">Απόφοιτος Λυκείου</option>
                         <option value="Απόφοιτος ΤΕΙ">Απόφοιτος ΤΕΙ</option>
@@ -159,7 +206,7 @@
                       <br><br>
 
                       <label for="course-pref">Κατεύθυνση σπουδών:</label>
-                      <input list="course-pref-list" name="course-pref" id="course-pref">
+                      <input list="course-pref-list" name="course-pref" id="course-pref" required>
                       <datalist id="course-pref-list">
                         <option value="Θετικές Επιστήμες">
                         <option value="Ανθρωπιστικές Επιστήμες">
@@ -195,7 +242,7 @@
                     <br><br>
 
                     <label for='hours'>Πόσες ώρες σε εβδομαδιαία βάση είστε διατεθιμένοι να αφιερώσετε στο JKed; </label>
-                    <select name="hours" id="hours">
+                    <select name="hours" id="hours" required>
                         <option disabled selected value>Επιλέξτε εδώ</option>
                         <option value="Λιγότερο από 1-2 ώρες">Λιγότερο από 1-2 ώρες</option>
                         <option value="1-2 ώρες">1-2 ώρες</option>
