@@ -17,7 +17,7 @@ body {
     "footer";
 
 }
-/*klash gia to ekastote grid*/
+/*klaseis gia kathe grid item, kai thn arxikopoihsh tou xwrou tous sto template area*/
 .grid-item-1{
     grid-area: header;
 }
@@ -47,7 +47,7 @@ body {
     "courses courses courses";
 }
 
-/*klash gia to ekastote grid sto index.html, pou orizontai sto grid-template-areas*/
+/*klaseis gia kathe grid item, kai thn arxikopoihsh tou xwrou tous sto template area gia to content tou index*/
 .index-main-grid-item-1{
     justify-self: center;
     grid-area: icon1; 
@@ -111,7 +111,6 @@ body {
     order:1;
 }
 
-/*used for grid layout in fields section */
 .field-wrapper{ /*grid gia content courses*/
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -120,7 +119,7 @@ body {
 }
 
 
-/*used for flex layout in courses section*/
+/*allagh se grid apo flexbox ths prhgoumenhs gia kaluterh stoixish twn elements mas*/
 .course-wrapper{
     display:grid;
     grid-template-columns: 1fr 0.5fr;
@@ -148,13 +147,11 @@ body {
     margin-top: 16%;   
 }
 
-/*klash gia tin eikona tou grid-area image1*/
+/*klaseis gia kathe grid item, kai thn arxikopoihsh tou xwrou tous sto template area gia to content twn mathimatwn*/
 .grid-courses-item-1{
     grid-area: image1;
 
 }
-
-/*klash gia tin grid area text1*/
 .grid-courses-item-2{
     grid-area: text1;
     margin-left: 2em;
@@ -199,7 +196,7 @@ body {
 
 
 
-/*we used variables for specific colors*/
+/*metavlites*/
 :root {
 
     --light:#FFFFAA;
@@ -221,30 +218,28 @@ body {
     src: url(fonts/Ubuntu-Regular.ttf);
 }
 
-/*klash gia to ekastote header*/
+/*klash gia to header*/
 header{
     background-color: var(--black89);
-    padding-top: 0px;
-    margin-top: 0px;
 }
 
 
 
 
-/*hyperlink specifications*/
-li > a:link,a:link {  
+
+li > a:link,a:link {  /*XRWMA TWN LINKS*/
     color: var(--red);
 }
 
-li > a:visited,a:visited{
+li > a:visited,a:visited{   /*XRWMA TWN VISITED LINKS*/
     color: purple;
 }
 
- li > a:hover,a:hover {
-    color: var(--light);
+ li > a:hover,a:hover {   /*XRWMA TWN LINKS OTAN VAZOUME TO PONTIKI PANW*/
+    color: blue;
 }
 
-li > a:active,a:active {
+li > a:active,a:active {   /*XRWMA TWN ACTIVE LINKS*/
     color: var(--white);
 }
 
@@ -608,7 +603,7 @@ footer a,p,li {
     color:var(--red);
 }
 
-/*mikri eikona panw sta hyperlinks*/
+/*mikri eikona panw sta hyperlinks ws pseudoelement*/
 .course-wrapper a[href^="http"]::after {
     font-family: 'Font Awesome 5 Free'; 
     content: " \f35d";
@@ -617,7 +612,7 @@ footer a,p,li {
     padding-left:2px;
 }
 
-@media only screen and (max-width: 600px){ /*KINITO 1 STHLH sto index*/
+@media only screen and (max-width: 600px){ /*KINITO 1 STHLH*/
     .index-main-grid{ 
         display:grid;
         grid-template-columns: 1fr;
@@ -666,7 +661,7 @@ footer a,p,li {
         transition: .2s ease-out;
     }
 
-    .top-courses-list{
+    .top-courses-list{ /*allagh se column*/
         flex-direction: column;
     }
     
