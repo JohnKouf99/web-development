@@ -17,7 +17,7 @@
    
         <header class = "grid-item-1 flex-container">
             <div class="container-flex-item">
-                <a href=index.html> <img class="logo" src="images/fav/newlogo.png"> </a>
+                <a href=index.html> <img class="logo" src="images/fav/newlogo.png" alt="logo"> </a>
             </div>
 
             <div class = "main-nav">
@@ -54,7 +54,7 @@
 		
 		<div class="grid-item-3">
             
-            <form class="registration-form" id="registration-form" method="post" action="" autocomplete="on";>
+            <form class="registration-form" id="registration-form" method="post" autocomplete="on">
                 <fieldset>
                     
                     <label for='lname'>Επώνυμο:</label>
@@ -62,8 +62,8 @@
 
                     <label for='fname'>Όνομα:</label>
                     <input type="text" id="fname" name="fname" placeholder="KOSTAS" required> 
-                    <label for='Email'>Διεύθυνση email:</label>
-                    <input type="text" id="email" name="Email" placeholder="example@email.com" required>
+                    <label for='email'>Διεύθυνση email:</label>
+                    <input type="text" id="email" name="email" placeholder="example@email.com" required>
 
                     
                     <label for='address'>Διεύθυνση Κατοικίας: </label>
@@ -72,7 +72,7 @@
 
                     <div class="birthdate"> 
                     <label for='birthdate'>Ημερομηνία γέννησης: </label>
-                    <input type="date" id="birthdate" name="birthdate" min="1900-01-01" max="2021-12-5"> 
+                    <input type="date" id="birthdate" name="birthdate" min="1900-01-01" max="2022-02-01"> 
                     </div>
 
                     
@@ -94,7 +94,7 @@
                     <br><br> 
 
                     <div class="password">
-                    <label for='pass' id="pass1-label">Κωδικός Πρόσβασης: </label>
+                    <label for="pass1">Κωδικός Πρόσβασης: </label>
                     <input type="password" id="pass1" name="pass1"  minlength="8" placeholder="8 characters minimum" required>
                     </div>
                     
@@ -113,13 +113,13 @@
 
                 <fieldset>
                     <div class="payment">
-                    <label for="payment">Τρόπος Πληρωμής: </label>
-                    <input type="radio" id="payment1" Name="payment" Value ="Χρεωστική Κάρτα" required>
-                    <label for="Χρεωστική Κάρτα">Χρεωστική Κάρτα</label>
-                    <input type="radio" id="payment2" Name="payment" Value ="Πιστωτική Κάρτα">
-                    <label for="Πιστωτική Κάρτα">Πιστωτική Κάρτα</label>
-                    </div>
-                    <br><br>
+                        <label for="payment1">Τρόπος Πληρωμής: </label>
+                        <input type="radio" id="payment1" Name="payment" Value ="Χρεωστική Κάρτα" required>
+                        <label for="payment2">Χρεωστική Κάρτα</label>
+                        <input type="radio" id="payment2" Name="payment" Value ="Πιστωτική Κάρτα">
+                        <label for="Πιστωτική-Κάρτα">Πιστωτική Κάρτα</label>
+                        </div>
+                        <br><br>
 
 
                     <label for='card-number'>Αριθμός Κάρτας: </label>
@@ -174,13 +174,13 @@
                     <label>Παρακαλώ για την ολοκλήρωση της εγγραφής σας, συμπληρώστε το παρακάτω ερωτηματολόγιο:</label>
                     <br><br><br>
 
-                    <label for="gender">Φύλο: </label><br><br>
+                    <label for="gender1">Φύλο: </label><br><br>
                     <input type="radio" id="gender1" Name="gender" Value ="Άνδρας" required>
-                    <label for="Άνδρας">Άνδρας</label>
+                    <label for="gender2">Άνδρας</label>
                     <input type="radio" id="gender2" Name="gender" Value ="Γυναίκα">
-                    <label for="Γυναίκα">Γυναίκα</label>
+                    <label for="gender3">Γυναίκα</label>
                     <input type="radio" id="gender3" Name="gender" Value ="Άλλο">
-                    <label for="Άλλο">Άλλο</label>
+                    <label for="gender4">Άλλο</label>
                     <br><br><br>
 
                     <label for="occupation">Επάγγελμα:</label>
@@ -275,7 +275,7 @@
                     
                 <ul>
                     <li>Τηλ.  2109999999</li>
-                    <li><a href= "mailto:  info@jked.gr">Email: info@jked.gr</a></li>
+                    <li><a href= "mailto:info@jked.gr">Email: info@jked.gr</a></li>
                     <li><a href="https://www.facebook.com/" target="_blank"> Facebook </a></li>
                     <li><a href="https://twitter.com/" target="_blank">Twitter </a></li>
                 </ul>

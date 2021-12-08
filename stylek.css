@@ -376,7 +376,7 @@ li > a:active,a:active {   /*XRWMA TWN ACTIVE LINKS*/
     margin-bottom:15px;
 }
 
-button[type=submit] , button[type=reset], button[type="text"]{ /* customization kapown buttons */
+button[type=submit] , button[type=reset], button[type="button"]{ /* customization kapown buttons */
     background-color: var(--red);
     color: whitesmoke;
     padding: 12px 20px;
@@ -385,7 +385,7 @@ button[type=submit] , button[type=reset], button[type="text"]{ /* customization 
     cursor: pointer;
 }
 
-button[type=submit]:hover, button[type=reset]:hover, button[type="text"]:hover { /* customization tou buttons ths formas sto hover kai tis formas eggrafis */
+button[type=submit]:hover, button[type=reset]:hover, button[type="button"]:hover { /* customization tou buttons ths formas sto hover kai tis formas eggrafis */
     background-color: var(--light);
     color: black;
 }
