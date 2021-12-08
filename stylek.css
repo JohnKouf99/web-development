@@ -1,4 +1,4 @@
-
+/*klash gia to body*/
 body {
     background-color: whitesmoke; 
     margin:0;
@@ -17,7 +17,7 @@ body {
     "footer";
 
 }
-
+/*klash gia to ekastote grid*/
 .grid-item-1{
     grid-area: header;
 }
@@ -47,7 +47,7 @@ body {
     "courses courses courses";
 }
 
-
+/*klash gia to ekastote grid sto index.html, pou orizontai sto grid-template-areas*/
 .index-main-grid-item-1{
     justify-self: center;
     grid-area: icon1; 
@@ -82,15 +82,18 @@ body {
     justify-content: space-around;
 }
 
+/*klash gia tin eikona sto navigation bar*/
 .container-flex-item{
     display:inline;
 }
 
+/*klaseis gia to footer*/
 .flex-container .footer-flex-item-2{ 
     align-self: flex-end;
     justify-self: flex-end;
 }
 
+/*klash tou about.html, gia to kathe member*/
 .about-flex-container{
     display:flex;
     align-items: center;
@@ -99,6 +102,7 @@ body {
     flex-wrap:nowrap;
 }
 
+/*allagh tou order gia to kathe member*/
 .change-position-item-1{
     order:2;
 }
@@ -130,24 +134,27 @@ body {
    "text4 image4"
    "text5 image5";
 }
+
+/*klash gia tin perigrafh mathimatos*/
 .grid-image{
     text-align: center;
 }
-
+/*morfopoihsh eikonwn stis perigrafes mathimatwn*/
 .grid-image img{
     
-    /*max-width:100%;*/ width: 90%;
+    width: 90%;
     height:60%;
     border: 5px solid var(--smoke); 
     margin-top: 16%;   
 }
 
-
+/*klash gia tin eikona tou grid-area image1*/
 .grid-courses-item-1{
     grid-area: image1;
 
 }
 
+/*klash gia tin grid area text1*/
 .grid-courses-item-2{
     grid-area: text1;
     margin-left: 2em;
@@ -192,28 +199,6 @@ body {
 
 
 
-
-/*used for image editing in courses-list
-.course-wrapper  div img {
-    display: block;/*???????
-    float: right;
-    margin-top: 100px; 
-    width:40%;
-    border: 5px solid var(--smoke);    
-    margin-right: 20px;  
-    margin-left: 20px;
-    height: 100%;
-    
-}*/
-
-/*used for text editing in courses-list
-.course-wrapper div p,  .course-wrapper div ul{
-    float: left;
-    margin-left: 20px;
-    width: 55%;  
-}*/
-
-
 /*we used variables for specific colors*/
 :root {
 
@@ -225,7 +210,7 @@ body {
     --black924:rgba(19, 19, 19, 0.924);
   }
 
-  
+ /*font faces*/ 
 @font-face {
       font-family: 'main';
       src: url(fonts/NotoSans-Regular.ttf);
@@ -236,21 +221,16 @@ body {
     src: url(fonts/Ubuntu-Regular.ttf);
 }
 
-
+/*klash gia to ekastote header*/
 header{
     background-color: var(--black89);
     padding-top: 0px;
     margin-top: 0px;
 }
 
-.index-img{
-    width: 150;
-    height:150;
-}
 
 
 
- 
 /*hyperlink specifications*/
 li > a:link,a:link {  
     color: var(--red);
@@ -294,11 +274,7 @@ li > a:active,a:active {
     transition: .2s ease-out;
 }
 
-.main-form label { /* text configuration gia th forma*/
-    font-family: 'ubuntu'; 
-    font-size: 130%;
-    color: var(--white);
-}
+
 
 .main-intro { /* klash gia to prwto meros kathe selidas kai to merge enos background color kai enos bacground image */
     padding: 30px;
@@ -344,7 +320,7 @@ li > a:active,a:active {
     background-blend-mode:screen;
 }
 
-.main-intro.form {
+.main-intro.form { /*  gia allagh eikonas kai blend mode se diaforetikes selides */
     background-image: url(images/subscription-image.jpeg);
     background-blend-mode:screen;
 }
@@ -371,9 +347,9 @@ li > a:active,a:active {
     height:3em;
 }
 
+/*klash gia tin forma sto form.html kai tou contactus.html*/
 .registration-form{
     margin:auto;
-    text-align: left;
     margin-top: 20px;
     border-radius: 5px;
     background-color: var(--smoke);
@@ -382,25 +358,19 @@ li > a:active,a:active {
     width:50%;
 }
 
-
-
-.registration-form label { /* text configuration gia th forma*/
+.registration-form label { /* text configuration gia tis formes*/
     font-family: 'ubuntu'; 
     font-size: 130%;
     color: var(--white);
 }
-
-.main-form { 
-    margin:auto;
+/*text align gia to contactus.html*/
+.registration-form-utility{
     text-align: center;
-    margin-top: 20px;
-    border-radius: 5px;
-    background-color: var(--smoke);
-    padding: 15px;
-    margin-bottom:15px;
-    width:50%;
 }
 
+
+
+/*klash sto index gia keimeno*/
 .index-start-now{
     margin:auto;
     text-align: center;
@@ -424,7 +394,7 @@ button[type=submit]:hover, button[type=reset]:hover, button[type="text"]:hover {
     background-color: var(--light);
     color: black;
 }
-
+/*klaseis gia tin forma , gia diafora input types kai domes*/
 input[type=text],[type=date],[type=password],[type=tel],[type=number],[type=select],input[list], textarea,select,option  { 
     font-family: 'ubuntu';
     font-size: large;
@@ -446,13 +416,6 @@ input[type=text],[type=date],[type=password],[type=tel],[type=number],[type=sele
     text-align: center;
 }
 
-.text-head-white { /* main headings tou about */
-    font-weight:bold;
-    font-size: xX-large;
-    color:var(--white);
-    font-family: 'main'; 
-    text-shadow: 1px 1px 1px black 
-}
 
 .text-head { /* main headings tou about */
     font-weight:bold;
@@ -467,12 +430,12 @@ input[type=text],[type=date],[type=password],[type=tel],[type=number],[type=sele
     font-family: 'main';
     font-size:large;
 }
-
+/*klash gia mhkos kai spacing tou text sto index*/
 .text-utility-width{
     width:80%;
     margin:auto;
 }
-
+/*klash gia mhkos kai spacing tou text sto about*/
 .text-utility-about-width{
     width:70%;
     margin:auto;
@@ -510,7 +473,7 @@ input[type=text],[type=date],[type=password],[type=tel],[type=number],[type=sele
     height: 500px;
 }*/
 
-footer { /* for spacing purposes */
+footer { /* gia spacing skopous sto footer */
     background-color:var(--black924);
     padding-bottom: 50px;
     padding-top: 20px;
@@ -518,7 +481,7 @@ footer { /* for spacing purposes */
     padding-right:20px;
     margin-top:20px;
 }
-
+/* morfopoihsh twn a,p,li elements tou footer */
 footer a,p,li { 
     color:white;
     font-size: 110%;
@@ -538,7 +501,7 @@ footer a,p,li {
     justify-content: space-evenly;   /*distributes the space between items evenly*/
 }
 
-/**/
+/*keimeno gia to courses.html*/
 .top-courses-text{
   color:var(--white);
   position: absolute;
@@ -564,59 +527,61 @@ footer a,p,li {
   }
 
 
-  /*class for a elements of unordered list*/
+  /*klash gia stoixeia ths unordered list*/
   .custom-list a {
     position: relative;
-    display: block; /*Displays an element as a block element */
-    padding: .4em .4em .4em 2em; /*creating space around an element*/
-    margin: auto; /*space around element is calculated by browser*/
+    display: block; 
+    padding: .4em .4em .4em 2em; 
+    margin: auto; 
     background: var(--white);
-    width: 35%; /*width of an element*/
-    color: var(--smoke); /*color of an element*/    
-    text-decoration: none; /*no decoration for text*/
-    transition: .3s ease-out; /*specifies a transition effect with a slow end*/
-    border-radius: .3em; /*adds rounded corners to border*/
-    font-family:'main'; /* 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    width: 35%; 
+    color: var(--smoke); 
+    text-decoration: none; 
+    transition: .3s ease-out; 
+    border-radius: .3em; 
+    font-family:'main'; 
     font-size:  large;
-    margin-top:1em; /*adds top margin*/
+    margin-top:1em; 
   }
 
+  /*klash gia ta ta p elements ths custom listas*/
   .custom-list p {
     position: relative;
-    display: block; /*Displays an element as a block element */
-    padding: .4em .4em .4em 4em; /*creating space around an element*/
-    margin: auto; /*space around element is calculated by browser*/
+    display: block; 
+    padding: .4em .4em .4em 4em; 
+    margin: auto; 
     background: var(--white);
-    width: 90%; /*width of an element*/
-    color: var(--smoke); /*color of an element*/    
-    text-decoration: none; /*no decoration for text*/
-    transition: .3s ease-out; /*specifies a transition effect with a slow end*/
-    border-radius: .3em; /*adds rounded corners to border*/
-    font-family:'main'; /* 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    width: 90%;
+    color: var(--smoke); 
+    text-decoration: none;
+    transition: .3s ease-out; 
+    border-radius: .3em; 
+    font-family:'main'; 
     font-size:  large;
-    margin-top:1em; /*adds top margin*/
+    margin-top:1em; 
   }
 
 
-/*this class is used to add the number to the ol list*/
+/*klash gia prosthesi arithmou ws pseudoelement stin custom list*/
 .custom-list a::before, .custom-list p::before{
-    content: counter(li); /*returns a counter before the main element*/
-    counter-increment: li; /*increases the counter*/
-    position: absolute; /*position  relative to its first positioned element*/
-    left: -1em; /*-0.5 em to the left*/
-    top: 55%; /*add top space*/
-    margin-top: -1.3em; /*leave space around elements*/
-    background: #f9dd94; /*background color for the counter*/
-    height: 2em; /*adds height to counter*/
-    width: 2em; /*adds width to counter*/
-    line-height: 2em; /*specifies the height of a line.*/
-    border: .2em solid var(--red); /*border for counter circle*/
+    content: counter(li); 
+    counter-increment: li; 
+    position: absolute; 
+    left: -1em; 
+    top: 55%; 
+    margin-top: -1.3em; 
+    background: #f9dd94; 
+    height: 2em; 
+    width: 2em; 
+    line-height: 2em; 
+    border: .2em solid var(--red); 
     text-align: center; 
     font-weight: bold;
-    border-radius: 2em; /*transforms the border into a circle*/
+    border-radius: 2em; 
     
   }
   
+  /*hover feature gia tin lista*/
   .custom-list a:hover { 
       background: #E9E4E0; 
       width:40%;
@@ -643,6 +608,7 @@ footer a,p,li {
     color:var(--red);
 }
 
+/*mikri eikona panw sta hyperlinks*/
 .course-wrapper a[href^="http"]::after {
     font-family: 'Font Awesome 5 Free'; 
     content: " \f35d";
@@ -651,7 +617,7 @@ footer a,p,li {
     padding-left:2px;
 }
 
-@media only screen and (max-width: 600px){ /*KINITO 1 STHLH*/
+@media only screen and (max-width: 600px){ /*KINITO 1 STHLH sto index*/
     .index-main-grid{ 
         display:grid;
         grid-template-columns: 1fr;
