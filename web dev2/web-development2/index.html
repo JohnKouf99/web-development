@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JKed | Καλώς ορίσατε στο JKed</title>
+    <link rel="shortcut icon" href="images/favnew.png" type="image/png"> 
+    <link rel="stylesheet" href="stylek.css">
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.7/dist/handlebars.js"></script>
+    <script type="text/javascript"  src="myscript2.js"></script>
+</head>
+<body>
+
+    <div class = "page-grid-container">
+   
+        <header class = "grid-item-1 flex-container">
+            <div class="container-flex-item">
+                <a href=index.html> <img class="logo" src="images/fav/newlogo.png" alt="logo"> </a>
+            </div>
+
+            <div class = "main-nav">
+                 <nav id="main-nav">
+                    <div class="container-flex-item">
+                        <a href="index.html">ΚΥΡΙΑ ΣΕΛΙΔΑ</a> 
+                    </div>
+                    <div class="container-flex-item">
+                        <a href="about.html">ΣΧΕΤΙΚΑ ΜΕ ΕΜΑΣ</a>
+                    </div> 
+                    <div class="container-flex-item">
+                        <a href="courses.html">ΜΑΘΗΜΑΤΑ</a> 
+                    </div>
+                    <div class="container-flex-item">
+                    <a href="contactus.html">ΕΠΙΚΟΙΝΩΝΙΑ</a>
+                    </div>
+                    <div class="container-flex-item">
+                        <a href="form.html">ΕΓΓΡΑΦΗ</a>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        
+
+
+
+        <div class= "grid-item-2">
+
+            <div class="main-intro index">
+                
+                
+            <p>Το JKed είναι από τα κορυφαίες σελίδες online εκμάθησης. </p> <p>Είτε ενδιαφέρεστε να μάθετε μόνοι σας,
+                αξιοποιώντας τα διαδικτυακά μαθήματα για να εκπαιδεύσετε το εργατικό δυναμικό σας ή δημιουργώντας ένα MOOC, βρίσκεστε στο σωστό μέρος!</p></div>
+
+            <div class="secondary"></div>
+
+        </div>
+
+
+
+
+
+            <div class= "grid-item-3 index-main-grid ">
+
+
+
+                <div class = "index-main-grid-item-1">
+                    
+                <ul class = "course-nav">                  
+                        <div id="target-2"></div>                   
+                </ul> 
+                </div>
+
+                <script id="tmpl-2" type = "text/x-handlebars-template">    
+                           
+                               <li><a href="">{{title}}</a></li>
+                           
+                </script>
+                
+                
+
+                
+
+
+                
+                <div class = "index-main-grid-item-2">
+                    <br><br><br><br><br>
+                    <input type="text" id="key" name="key" placeholder="Αναζητήστε μαθήματα εδώ">
+                    <button class="search-button" type="submit" id="sbtn" >Αναζήτηση</button>
+                </div>
+                <br><br>
+                <div class = "index-main-grid-item-3"><div id="target"></div></div>
+
+                
+                <script id="tmpl" type = "text/x-handlebars-template"> 
+                    
+                    
+                    <ul class="custom-list">
+                        <li><p>
+                            id: {{id}}
+                        </p></li>
+                        <li><p>
+                            title: {{title}}
+                        </p></li>
+                        <li><p>
+                            category: {{category}}
+                        </p></li>
+                        <li><p>
+                            objectives: {{objectives}}
+                        </p></li>
+                        <li><p>
+                            description: {{description}}
+                        </li></ul> 
+
+                        <p>
+                            <img src="https://elearning-aueb.herokuapp.com/static/images/{{img}}" alt="failed to load" class="result-img">
+                        </p>
+                        <hr>  
+                </script>
+
+                   
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        <footer class= "grid-item-4 flex-container">
+            <div class= "footer-flex-item-1">
+                <p>Εναλλακτικοί τρόποι επικοινωνίας:</p>
+                    
+                <ul>
+                    <li>Τηλ.  2109999999</li>
+                    <li><a href= "mailto:info@jked.gr">Email: info@jked.gr</a></li>
+                    <li><a href="https://www.facebook.com/" target="_blank"> Facebook </a></li>
+                    <li><a href="https://twitter.com/" target="_blank">Twitter </a></li>
+                </ul>
+            </div>
+        
+            <p class= "footer-flex-item-2">© 2021 JKed. All rights reserved.</p>
+        </footer> 
+    </div>
+</body>
+</html>

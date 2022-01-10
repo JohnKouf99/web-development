@@ -1,0 +1,846 @@
+/*klash gia to body*/
+body {
+    background-color: whitesmoke; 
+    margin:0;
+    padding:0;
+}
+
+.page-grid-container{ /*grid gia to main layout kathe page*/
+    display:grid;
+    grid-auto-flow: column;
+    grid-auto-rows:minmax(100px,auto);
+    grid-template-areas: 
+    
+    "header"
+    "subheader" 
+    "content"
+    "footer";
+
+}
+/*klaseis gia kathe grid item, kai thn arxikopoihsh tou xwrou tous sto template area*/
+.grid-item-1{
+    grid-area: header;
+}
+
+.grid-item-2{
+    grid-area: subheader;
+}
+
+.grid-item-3{
+    grid-area: content;
+}
+
+.grid-item-4{
+    grid-area: footer;
+}
+
+.index-main-grid{ /*DESKTOP 3 STHLES*/
+    display:grid;
+    grid-auto-rows:minmax(100px,auto);
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr; 
+    grid-template-areas:
+
+    "icon1 icon1 icon1" /*menu*/
+    "start-now start-now start-now" /*search bar*/
+    "title title title"; /*search results*/
+}
+
+/*klaseis gia kathe grid item, kai thn arxikopoihsh tou xwrou tous sto template area gia to content tou index*/
+.index-main-grid-item-1{
+    
+    justify-self: center;
+    grid-area: icon1; 
+    position: absolute;
+    
+    
+    
+}
+
+.index-main-grid-item-2{
+    justify-self: center;
+    grid-area: start-now;
+    margin-top: 10%;
+}
+
+.index-main-grid-item-3{
+    justify-self: center;
+    grid-area: title;
+}
+
+.course-nav{   
+  margin-top: 5%;
+  list-style-type: none; 
+  text-align: center;
+  
+  
+}
+
+.course-nav li{
+    display: inline-block; 
+    padding: 2%;
+    
+}
+
+.course-nav li a{ 
+  color: var(--red); 
+  padding: 20px;
+  text-decoration: none;
+  font-family: ubuntu;
+  font-size: 100%;   
+}
+
+
+
+.course-nav li a:hover {
+    background-color:grey;
+    border-radius: 20px;
+    transition: .2s ease-out;
+  }
+
+/*
+.index-main-grid-item-4{
+    grid-area: start-now;
+}
+
+.index-main-grid-item-5{
+    justify-self: center;
+    grid-area: title;
+}
+
+.index-main-grid-item-6{
+    grid-area: courses;
+}*/
+
+
+
+.flex-container{ /*flex container class gia footer kai header*/
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/*klash gia tin eikona sto navigation bar*/
+.container-flex-item{
+    display:inline;
+}
+
+/*klaseis gia to footer*/
+.flex-container .footer-flex-item-2{ 
+    align-self: flex-end;
+    justify-self: flex-end;
+}
+
+/*klash tou about.html, gia to kathe member*/
+.about-flex-container{
+    display:flex;
+    align-items: center;
+    padding:30px;
+    column-gap: 7em;
+    flex-wrap:nowrap;
+}
+
+/*allagh tou order gia to kathe member*/
+.change-position-item-1{
+    order:2;
+}
+
+.change-position-item-2{
+    order:1;
+}
+
+.field-wrapper{ /*grid gia content courses*/
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    text-align: center;
+}
+
+.search-button{
+    text-align: center;
+    width: auto;
+    margin-left: 33%;
+    
+}
+
+
+.result-img{
+    
+    
+    width: 25%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px solid var(--smoke); 
+}
+
+
+/*allagh se grid apo flexbox ths prhgoumenhs gia kaluterh stoixish twn elements mas*/
+.course-wrapper{
+    display:grid;
+    grid-template-columns: 1fr 0.5fr;
+    column-gap: 0.5%;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+
+   "text1 image1"
+   "text2 image2"
+   "text3 image3"
+   "text4 image4"
+   "text5 image5";
+}
+
+/*klash gia tin perigrafh mathimatos*/
+.grid-image{
+    text-align: center;
+}
+/*morfopoihsh eikonwn stis perigrafes mathimatwn*/
+.grid-image img{
+    
+    width: 90%;
+    height:60%;
+    border: 5px solid var(--smoke); 
+    margin-top: 16%;   
+}
+
+/*klaseis gia kathe grid item, kai thn arxikopoihsh tou xwrou tous sto template area gia to content twn mathimatwn*/
+.grid-courses-item-1{
+    grid-area: image1;
+
+}
+.grid-courses-item-2{
+    grid-area: text1;
+    margin-left: 2em;
+}
+
+.grid-courses-item-3{
+    grid-area: image2;
+}
+
+.grid-courses-item-4{
+
+    grid-area: text2;
+    margin-left: 2em;
+}
+
+.grid-courses-item-5{
+    grid-area: image3;
+}
+
+.grid-courses-item-6{
+    grid-area: text3;
+    margin-left: 2em;
+}
+
+.grid-courses-item-7{
+    grid-area: image4;
+}
+
+.grid-courses-item-8{
+    grid-area: text4;
+    margin-left: 2em;
+}
+
+.grid-courses-item-9{
+    grid-area: image5;
+}
+
+.grid-courses-item-10{
+    grid-area: text5;
+    margin-left: 2em;
+}
+
+
+
+/*metavlites*/
+:root {
+
+    --light:#FFFFAA;
+    --red: #BB1846;
+    --smoke: #414042;
+    --white: whitesmoke;
+    --black89: rgba(19, 19, 19, 0.89); 
+    --black924:rgba(19, 19, 19, 0.924);
+  }
+
+ /*font faces*/ 
+@font-face {
+      font-family: 'main';
+      src: url(fonts/NotoSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'ubuntu';
+    src: url(fonts/Ubuntu-Regular.ttf);
+}
+
+/*klash gia to header*/
+header{
+    background-color: var(--black89);
+}
+
+
+
+
+
+li > a:link,a:link {  /*XRWMA TWN LINKS*/
+    color: var(--red);
+}
+
+li > a:visited,a:visited{   /*XRWMA TWN VISITED LINKS*/
+    color: purple;
+}
+
+ li > a:hover,a:hover {   /*XRWMA TWN LINKS OTAN VAZOUME TO PONTIKI PANW*/
+    color: blue;
+}
+
+li > a:active,a:active {   /*XRWMA TWN ACTIVE LINKS*/
+    color: var(--white);
+}
+
+
+.logo { /* klash gia to logo ths selidas panw aristera*/
+    width: 210px;
+    height: 100px;
+    padding-top:4px;
+    padding-left:10px;
+}
+
+.main-nav{ /* klash gia to main navigation menu*/
+    padding: 40px;
+    text-align: center;
+    border-radius: 5px;
+    font-family: 'ubuntu'; 
+    font-size: 120%
+}
+
+
+.main-nav a{ 
+    padding:20px; /* skopos: spacing twn menu items*/
+}
+
+.main-nav a:hover{ /* vazw ena gri background otan kanw hover ta menu items*/
+    background-color:grey;
+    border-radius: 20px;
+    transition: .2s ease-out;
+}
+
+
+
+.main-intro { /* klash gia to prwto meros kathe selidas kai to merge enos background color kai enos bacground image */
+    padding: 30px;
+    background-color:var(--red);  /*color */
+    background-image: url(images/crowd.jpg); /* background image */
+    background-size:cover;  /*sizarw thn eikona na kanei cover to element mou*/                     
+    background-repeat:no-repeat; /*de thelw na epanalamvanetai*/
+    background-position:center center;
+    background-blend-mode:luminosity; /* mode gia to merge */
+    height: auto; 
+    user-select:none /* kanei disable thn epilogh text */
+}
+
+.main-intro p{ /*font configuration gia to main intro */
+    margin:auto;
+    padding:80px;
+    font-family: 'ubuntu'; 
+    font-size: 200%;
+    text-align: center;
+    font-weight: bold;
+    color:var(--white);
+    text-shadow: 1px 1px 1px black;
+}
+
+/*adds image and background mode to cpp.html's header*/
+.main-intro.cpp {
+    background-image: url(images/cpp-main.png);
+    background-blend-mode:screen;
+}
+/*adds image and background mode to chinese.html's header*/
+.main-intro.chinese {
+    background-image: url(images/main-chinese.jpg);
+    background-blend-mode:screen;
+}
+/*adds image and background mode to arts.html's header*/
+.main-intro.arts {
+    background-image: url(images/main-arts.png);
+    background-blend-mode:screen;
+}
+
+.main-intro.index{ /*  gia allagh eikonas kai blend mode se diaforetikes selides */
+    background-image: url(images/index-main-3.jpg);
+    background-blend-mode:screen;
+}
+
+.main-intro.form { /*  gia allagh eikonas kai blend mode se diaforetikes selides */
+    background-image: url(images/subscription-image.jpeg);
+    background-blend-mode:screen;
+}
+
+.main-intro.courses{ /*  gia allagh eikonas kai blend mode se diaforetikes selides */
+    background-image: url(images/courses-main-2.jpg);
+    background-blend-mode:screen;
+}
+
+.main-intro.about{ /*  gia allagh eikonas kai blend mode se diaforetikes selides */
+    background-image: url(images/students2.jpg);
+    background-blend-mode:screen;
+}
+
+.main-intro.about p{  /*  gia allagh font kai color se diaforetikes selides */
+    padding:50px;
+    color:var(--black924);
+    text-shadow: 1px 1px 1px white;
+}
+
+
+.secondary{ /* klash gia mia gri bara katw apo to main-intro */
+    background-color: var(--black89);
+    height:3em;
+}
+
+/*klash gia tin forma sto form.html kai tou contactus.html*/
+.registration-form{
+    margin:auto;
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: var(--smoke);
+    padding: 15px;
+    margin-bottom:15px;
+    width:50%;
+}
+
+.registration-form label { /* text configuration gia tis formes*/
+    font-family: 'ubuntu'; 
+    font-size: 130%;
+    color: var(--white);
+}
+/*text align gia to contactus.html*/
+.registration-form-utility{
+    text-align: center;
+}
+
+
+
+/*klash sto index gia keimeno*/
+.index-start-now{
+    margin:auto;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: var(--smoke);
+    padding: 15px;
+    margin-bottom:15px;
+}
+
+button[type=submit] , button[type=reset], button[type="button"]{ /* customization kapown buttons */
+    background-color: var(--red);
+    color: whitesmoke;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type=submit]:hover, button[type=reset]:hover, button[type="button"]:hover { /* customization tou buttons ths formas sto hover kai tis formas eggrafis */
+    background-color: var(--light);
+    color: black;
+}
+/*klaseis gia tin forma , gia diafora input types kai domes*/
+input[type=text],[type=date],[type=password],[type=tel],[type=number],[type=select],input[list], textarea,select,option  { 
+    font-family: 'ubuntu';
+    font-size: large;
+    width: 100%; 
+    padding: 12px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; /*  */
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: none; /* dinoume thn epilogh mono vertically */
+    
+}
+
+
+
+
+.about-text {  /* text kentrika */
+    text-align: center;
+}
+
+
+.text-head { /* main headings tou about */
+    font-weight:bold;
+    font-size: xX-large;
+    color:var(--red);
+    font-family: 'main'; 
+    text-shadow: -1px 1px 0px black;
+}
+
+.text-sub { /* aplo text tou about */
+    color:var(--black924);
+    font-family: 'main';
+    font-size:large;
+}
+/*klash gia mhkos kai spacing tou text sto index*/
+.text-utility-width{
+    width:80%;
+    margin:auto;
+}
+/*klash gia mhkos kai spacing tou text sto about*/
+.text-utility-about-width{
+    width:70%;
+    margin:auto;
+}
+
+.text-names { /* member text tou about */
+    color:var(--smoke);
+    font-weight: bold;
+    font-family:'Times New Roman', Times, serif;
+    text-align: center;
+    text-decoration:underline;
+    font-size: x-large;
+}
+
+.our-team img{ /* image customization gia ta members */
+    max-width: 100%; 
+    height: 300px;
+    padding:20px;
+    margin: 20px;
+    border-radius: 200px;
+}
+
+/*De ta xreiazomaste giati xrisimopoioume flexbox
+.our-team > .members-align:nth-child(2n-1) > img{  stoixizw aristera kathe allo paidi ksekinontas apo to 2o
+    float:left;
+}
+.our-team > .members-align:nth-child(2n) > img { /* stoixizw deksia kathe allo paidi ksekinontas apo to 1o 
+    float:right;
+}
+.our-team p{ /* for spacing purposes 
+    padding:40px;
+}
+.members-align { /* for spacing purposes 
+    width:100%;
+    height: 500px;
+}*/
+
+footer { /* gia spacing skopous sto footer */
+    background-color:var(--black924);
+    padding-bottom: 50px;
+    padding-top: 20px;
+    padding-left:20px;
+    padding-right:20px;
+    margin-top:20px;
+}
+/* morfopoihsh twn a,p,li elements tou footer */
+footer a,p,li { 
+    color:white;
+    font-size: 110%;
+}
+
+
+/*sets a background color and border in index page for the top courses section*/
+.top-courses{
+    background-color:var(--red);
+    border: 5px solid var(--smoke);    
+    
+}
+
+/*sets us a display for top courses list in index page for the top courses section*/
+.top-courses-list{
+    display: flex;
+    justify-content: space-evenly;   /*distributes the space between items evenly*/
+}
+
+/*keimeno gia to courses.html*/
+.top-courses-text{
+  color:var(--white);
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  font-family: 'main';
+  font-size:large;
+}
+
+/*used in index page to include text and image in the same container*/
+.container {
+    position: relative; /*keeps the layout unchanged*/
+}
+
+
+/*class for ol list*/
+  .custom-list {
+    counter-reset: li;  /*creates a counter for each li element*/
+    list-style: none;  /*list has no style*/
+    padding: 0;        /*list has default padding*/
+    
+  }
+
+
+  /*klash gia stoixeia ths unordered list*/
+  .custom-list a {
+    position: relative;
+    display: block; 
+    padding: .4em .4em .4em 2em; 
+    margin: auto; 
+    background: var(--white);
+    width: 35%; 
+    color: var(--smoke); 
+    text-decoration: none; 
+    transition: .3s ease-out; 
+    border-radius: .3em; 
+    font-family:'main'; 
+    font-size:  large;
+    margin-top:1em; 
+  }
+
+  /*klash gia ta ta p elements ths custom listas*/
+  .custom-list p {
+    position: relative;
+    display: block; 
+    padding: .4em .4em .4em 2em; 
+    margin: auto; 
+    background: var(--white);
+    width: 90%;
+    color: var(--smoke); 
+    text-decoration: none;
+    transition: .3s ease-out; 
+    border-radius: .3em; 
+    font-family:'main'; 
+    font-size:  large;
+    margin-top:1em; 
+  }
+
+
+.sec{
+    margin-left: auto;
+    
+}
+
+
+/*klash gia prosthesi arithmou ws pseudoelement stin custom list*/
+.custom-list a::before, .custom-list p::before{
+    content: counter(li); 
+    counter-increment: li; 
+    position: absolute; 
+    left: -1em; 
+    top: 55%; 
+    margin-top: -1.3em; 
+    background: #f9dd94; 
+    height: 2em; 
+    width: 2em; 
+    line-height: 2em; 
+    border: .2em solid var(--red); 
+    text-align: center; 
+    font-weight: bold;
+    border-radius: 2em; 
+    
+  }
+  
+  /*hover feature gia tin lista*/
+  .custom-list a:hover { 
+      background: #E9E4E0; 
+      width:40%;
+    
+    } /*adds hover color*/
+  
+  /*adds color, font family, and margin for header in list*/
+  .custom-list h3{
+      color: var(--smoke);
+      font-family: 'main'; 
+      margin: 100px 0 50px 0;
+      text-shadow: 0.5px 2px black;
+     
+  }
+/*adds border color, width, and height for img in list*/
+.custom-list img{
+    border: 5px solid var(--smoke); 
+    max-width: 100%;
+    height: auto;
+    
+  }
+
+.course a:link{
+    color:var(--red);
+}
+
+/*mikri eikona panw sta hyperlinks ws pseudoelement*/
+.course-wrapper a[href^="http"]::after {
+    font-family: 'Font Awesome 5 Free'; 
+    content: " \f35d";
+    font-weight:600;
+    font-size:.8em;
+    padding-left:2px;
+}
+
+@media only screen and (max-width: 600px){ /*KINITO 1 STHLH*/
+    .index-main-grid{ 
+        width: 100%;
+        
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+    
+        "icon1"
+        "start-now"
+        "title"  
+    }
+
+    .custom-list a::before, .custom-list p::before{ /*allagi kapoiwn metablitwn tis listas*/
+        content: counter(li); 
+        counter-increment: li; 
+        position: absolute; 
+        left: -0.1em; 
+        top: 55%; 
+        margin-top: -1.3em; 
+        background: #f9dd94; 
+        height: 1.5em; 
+        width: 1.5em; 
+        line-height: 1.5em; 
+        border: .2em solid var(--red); 
+        text-align: center; 
+        font-weight: bold;
+        border-radius: 2em; 
+        
+      }
+
+      .custom-list p {
+        position: relative;
+        display: block; 
+        padding: .4em .4em .4em 2.5em; 
+        margin: auto; 
+        background: var(--white);
+        width: 90%;
+        color: var(--smoke); 
+        text-decoration: none;
+        transition: .3s ease-out; 
+        border-radius: .3em; 
+        font-family:'main'; 
+        font-size:  large;
+        margin-top:1em; 
+      }
+
+
+      
+
+
+    .result-img{
+        width: 50%;
+        display: block; 
+        margin-left: auto;
+        margin-right: auto;
+        border: 5px solid var(--smoke); 
+
+    }
+
+    .field-wrapper{ /*grid gia content courses*/
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        text-align: center;
+    }
+
+    .flex-container{ /*kinito: responsive flexbox sto header gia to nav*/
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container-flex-item{/*kinito: responsive flexbox sto header gia to nav */
+        display: flex; /*kathe flexbox item einai flexbox gia spacing purposes*/
+        text-align: center;
+        justify-content: center;
+    }
+
+    .about-flex-container{ /*kinito: about members allazw to align se column*/
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        padding:30px;
+        column-gap: 7em;
+        flex-wrap:nowrap;
+    }
+
+    .main-nav a:hover{ /* vazw ena gri background otan kanw hover ta menu items*/
+        background-color:grey;
+        width:100%;
+        border-radius: 50px;
+        transition: .2s ease-out;
+    }
+
+    .top-courses-list{ /*allagh se column*/
+        flex-direction: column;
+    }
+    
+}
+
+@media only screen and (max-width: 1200px) and (min-width:600px) { /*TABLET 2 STHLES*/
+    .index-main-grid{ 
+
+        display:grid;
+        margin-left: 5%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr ;
+        grid-template-areas:
+    
+        "icon1 icon1"
+        "start-now start-now"
+        "title title"
+        
+        
+    }
+
+    .result-img{
+        width: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border: 5px solid var(--smoke); 
+
+    }
+
+    .field-wrapper{ /*grid gia content courses*/
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        text-align: center;
+    }
+
+    .flex-container{ /*tablet: responsive flexbox sto header gia to nav*/
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container-flex-item{ /*tablet: responsive flexbox sto header gia to nav*/
+        text-align: center;
+    }
+
+}
+
+@media only screen and (max-width:1200px){ /*koino media query kai gia kinito kai gia tablet*/
+    .course-wrapper{
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+    
+       "image1"
+       "text1"
+       "image2"
+       "text2"
+       "image3"
+       "text3"
+       "image4"
+       "text4"
+       "image5"
+       "text5";
+    }
+}
+
+.passwordError{ /*Klash gia to error ths formas sto password field*/
+    font-family: "main";
+    color:red;
+    padding-left:1em;
+}
