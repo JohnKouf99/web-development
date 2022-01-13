@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JKed | Καλώς ορίσατε στο JKed</title>
+    <link rel="shortcut icon" href="images/favnew.png" type="image/png"> 
+    <link rel="stylesheet" href="stylek.css">
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.7/dist/handlebars.js"></script>
+    <script type="text/javascript" defer src="register.js"></script>
+</head>
+
+<body >
+
+    <div class = "page-grid-container">
+   
+        <header class = "grid-item-1 flex-container">
+            <div class="container-flex-item">
+                <a href=index.html> <img class="logo" src="images/fav/newlogo.png" alt="logo"> </a>
+            </div>
+
+            <div class = "main-nav">
+                 <nav id="main-nav">
+                    <div class="container-flex-item">
+                        <a href="index.html">ΚΥΡΙΑ ΣΕΛΙΔΑ</a> 
+                    </div>
+                    <div class="container-flex-item">
+                        <a href="about.html">ΣΧΕΤΙΚΑ ΜΕ ΕΜΑΣ</a>
+                    </div> 
+                    <div class="container-flex-item">
+                        <a href="courses.html">ΜΑΘΗΜΑΤΑ</a> 
+                    </div>
+                        <div class="container-flex-item">
+                    <a href="contactus.html">ΕΠΙΚΟΙΝΩΝΙΑ</a>
+                    </div>
+                    <div class="container-flex-item">
+                        <a href="form.html">ΕΓΓΡΑΦΗ</a>
+                    </div>
+                </nav>
+            </div>
+        </header>
+		
+        <div class="grid-item-2">
+
+            <div class="main-intro form">
+                <p>Γίνετε και εσείς μέλος της κοινότητας μας για να απολαμβάνετε την πλήρη εμπειρία του JKed!</p>
+                <p>Εγγραφείτε εδώ:</p>
+            </div>
+
+            <div class="secondary"></div>
+        </div>
+		
+		
+		<div class="grid-item-3">
+            
+            <form class="registration-form" id="registration-form" method="post" autocomplete="on">
+                <fieldset>
+                    <!--
+                    <label for='lname'>Επώνυμο:</label>
+                    <input type="text" id="lname" name="lname" placeholder="PAPADOPOULOS" required> 
+
+                    <label for='fname'>Όνομα:</label>
+                    <input type="text" id="fname" name="fname" placeholder="KOSTAS" required> 
+
+
+                    <label for='email'>Διεύθυνση email:</label>
+                    <input type="text" id="email" name="email" placeholder="example@email.com" required>
+
+                    
+                    <label for='address'>Διεύθυνση Κατοικίας: </label>
+                    <input type="text" id="address" name="address" placeholder="πχ. Pattision Street, 76 Athens" required>
+                    <br><br> 
+
+                    <div class="birthdate"> 
+                    <label for='birthdate'>Ημερομηνία γέννησης: </label>
+                    <input type="date" id="birthdate" name="birthdate" min="1900-01-01" max="2022-02-01"> 
+                    </div>
+                   
+                    <div class="phone"> 
+                    <label for='phone'>Τηλέφωνο Επικοινωνίας: </label>
+                    <input type="tel" id="phone" name="phone" placeholder=" πχ. 6987654321" pattern="[0-9]{10}" required>
+                    </div>   
+                    <br><br> 
+
+                    
+                    <label for='username'>Όνομα Χρήστη: </label>
+                    <input type="text" id="username" name="username" placeholder="πχ. kostas123" required>
+                    <br><br>  -->
+
+                    <div class="password">
+                    <label for="pass1">Κωδικός Πρόσβασης: </label>
+                    <input type="password" id="pass1" name="pass1"  minlength="3" placeholder="8 characters minimum - one special character required - one number - one letter" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{3,}$" required>
+                    </div>
+                    <br><br>
+
+                    <div class="password-error"></div>
+                    <br>
+                    
+                    <div class="password">
+                    <label for="pass2">Επιβεβαίωση κωδικού πρόσβασης: </label>
+                    <input type="password" id="pass2" name="pass2" minlength="3" placeholder="8 characters minimum - one special character required - one number - one letter" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{3,}$"  required>
+                    </div>
+                    <br><br>
+
+                    <div class="password-error"></div>
+                    <br>
+                    <!--
+                    <label for="studies">Επίπεδο σπουδών:</label>
+                      <select name="studies" id="studies"  required>
+                        <option disabled selected value>Επιλέξτε εδώ</option>
+                        <option value="Απόφοιτος Λυκείου">Απόφοιτος Λυκείου</option>
+                        <option value="Απόφοιτος ΤΕΙ">Απόφοιτος ΤΕΙ</option>
+                        <option value="Απόφοιτος ΑΕΙ">Απόφοιτος ΑΕΙ</option>
+                        <option value="Απόφοιτος Μεταπτυχιακού">Απόφοιτος Μεταπτυχιακού</option>
+                        <option value="Απόφοιτος Διδακτορικού">Απόφοιτος Διδακτορικού</option>
+                        <option value="Απόφοιτος Διδακτορικού">Άλλο</option>
+                        </select>
+                      <br><br>
+
+                      <label for="course-pref">Κατεύθυνση σπουδών:</label>
+                      <input list="course-pref-list" name="course-pref" id="course-pref" placeholder="πχ. Θετικές Επιστήμες"  required>
+                      <datalist id="course-pref-list">
+                        <option value="Θετικές Επιστήμες">
+                        <option value="Ανθρωπιστικές Επιστήμες">
+                        <option value="Επιστήμη Πληροφορικής">
+                        <option value="Οικονομικές Επιστήμες">
+                        <option value="Επιστήμη Λογιστικής">
+                        <option value="Επιστήμη Τέχνης">
+                    </datalist>
+                      <br><br>
+
+                      <label for="graduation">Έτος αποφοίτησης:</label>
+                      <input type="number" min="1900" max="2022" value="2021" required>
+                      <br><br>
+
+                    <label for='foreign-lang'>Επίπεδο Ξένων Γλωσσών: </label>
+                    <input type="text" id="foreign-lang" name="foreign-lang" placeholder="πχ Αγγλικά-C2, Γαλλικά-Β1, κλπ" required>
+                    <br><br> -->
+
+                    
+                    <div class = "about-text">
+                        <button type="submit" >Ολοκλήρωση Εγγραφής</button>
+                        
+                        <br><br>
+                        <button type="reset">Άκυρο</button>
+                    </div>
+
+                </fieldset>
+
+            </form>
+
+            <div class="about-text">
+            <p class="text-sub " id="p1"></p>   
+            <a class="text-sub" href="index.html" id='indexlink'></a> 
+            </div>
+
+
+
+        </div>
+		
+		
+		<footer class= "grid-item-4 flex-container">
+            <div class= "footer-flex-item-1">
+                <p>Εναλλακτικοί τρόποι επικοινωνίας:</p>
+                    
+                <ul>
+                    <li>Τηλ.  2109999999</li>
+                    <li><a href= "mailto:info@jked.gr">Email: info@jked.gr</a></li>
+                    <li><a href="https://www.facebook.com/" target="_blank"> Facebook </a></li>
+                    <li><a href="https://twitter.com/" target="_blank">Twitter </a></li>
+                </ul>
+            </div>
+        
+            <p class= "footer-flex-item-2">© 2021 JKed. All rights reserved.</p>
+        </footer> 
+    </div>       
+</body>
+
+</html>

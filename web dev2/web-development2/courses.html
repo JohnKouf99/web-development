@@ -7,6 +7,8 @@
     <title>JKed | Μαθήματα</title>
     <link rel="shortcut icon" href="images/favnew.png" type="image/png">
     <link rel="stylesheet" href="stylek.css">
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.7/dist/handlebars.js"></script>
+    <script type="text/javascript"  src="courses.js"></script>
 </head>
 <body>
 
@@ -52,6 +54,53 @@
         <div class= "grid-item-3">
                 <div class="about-text">
                 <h2 class="text-head">Μαθήματα που προσφέρονται στο JK education:</h2></div>
+
+
+
+                <div class = "index-main-grid-item-3"><div id="target-courses"></div></div>
+
+                
+                <script id="tmpl-courses" type = "text/x-handlebars-template">  
+
+                    <div class="course-wrapper">
+
+                        <div class = "grid-courses-item-1 grid-image"> 
+                        <img src="https://elearning-aueb.herokuapp.com/static/images/{{img}}" alt="failed to load" class="result-img">
+                        </div>
+    
+                        <div class="grid-courses-item-2">
+
+
+                        
+    
+                            <ul class="custom-list">
+                            <li><p>
+                                Τίτλος: {{title}}
+                            </p></li>
+                            <li><p>
+                                Κωδικός: {{id}}
+                            </p></li>
+                            <li><p>
+                                Νούμερο κατηγορίας: {{category}}
+                            </p></li>
+                            </ul>
+
+                        <p class="text-sub">{{description}}</p>
+
+                        <p class="text-sub">Στόχοι: {{objectives}}</p>
+                            
+                           </div> 
+                                
+                        </div>
+    
+                        
+
+                    <br><br>
+                </script>
+
+
+
+
             </div>   
   
             

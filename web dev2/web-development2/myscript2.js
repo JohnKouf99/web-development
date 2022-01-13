@@ -3,9 +3,9 @@ window.onload = init;
 
 
 function init() {
-    printCategory()
+    printCategory() //emfanizw katigories sto menu tou index
     let btn = document.getElementById("sbtn")
-    btn.addEventListener('click', fetchh)
+    btn.addEventListener('click', fetchh) //vriskei mathimata me sigkekrimeno keyword
     
 }
 
@@ -17,17 +17,18 @@ let btn = document.getElementById("sbtn")
 btn.addEventListener('click', fetchh)
 
 }*/
+
+
 function fetchh(){
+    document.getElementById('target').innerHTML  = "";
     var keyword = document.getElementById("key").value
     keyword = keyword.replace(/^\s+|\s+$/gm,''); // diagrafw whitespaces
     keyword = keyword.replace(/\s+/g, '+'); //antikathistw space me + sign
     let url = 'https://elearning-aueb.herokuapp.com/courses/search?title=' + keyword 
-    document.getElementById('target').innerHTML  = "";
+    
     let rendered;
 
-    //console.log(keyword)
-    // console.log(url)
-  
+
     fetch(url, {
         
         method: 'GET',
@@ -100,6 +101,10 @@ function printCategory(){
         
         });   
     }
+
+
+
+
    
 
 
