@@ -53,9 +53,9 @@ body {
     grid-area: icon1; 
     position: absolute;
     
-    
-    
 }
+
+
 
 .index-main-grid-item-2{
     justify-self: center;
@@ -90,7 +90,13 @@ body {
   font-size: 100%;   
 }
 
-
+.text-sub.network-error {
+    text-align: center;
+    font-size: 1.6em;
+    width:100%;
+    font-weight: bold;
+    color: red;
+}
 
 .course-nav li a:hover {
     background-color:grey;

@@ -35,7 +35,7 @@
                     <a href="contactus.html">ΕΠΙΚΟΙΝΩΝΙΑ</a>
                     </div>
                     <div class="container-flex-item">
-                        <a href="form.html">ΕΓΓΡΑΦΗ</a>
+                        <a href="register.html">ΕΓΓΡΑΦΗ</a>
                     </div>
                 </nav>
             </div>
@@ -63,11 +63,11 @@
                     <label for='fname'>Όνομα:</label>
                     <input type="text" id="fname" name="fname" placeholder="KOSTAS" required> 
 
-
+                    -->
                     <label for='email'>Διεύθυνση email:</label>
                     <input type="text" id="email" name="email" placeholder="example@email.com" required>
 
-                    
+                    <!--
                     <label for='address'>Διεύθυνση Κατοικίας: </label>
                     <input type="text" id="address" name="address" placeholder="πχ. Pattision Street, 76 Athens" required>
                     <br><br> 
@@ -90,20 +90,20 @@
 
                     <div class="password">
                     <label for="pass1">Κωδικός Πρόσβασης: </label>
-                    <input type="password" id="pass1" name="pass1"  minlength="3" placeholder="8 characters minimum - one special character required - one number - one letter" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{3,}$" required>
+                    <input type="password" id="pass1" name="pass1"  minlength="3" placeholder="8 characters minimum - one special character required - one number - one letter" required>
                     </div>
                     <br><br>
 
-                    <div class="password-error"></div>
+                    <div class="password-error text-sub"></div>
                     <br>
                     
                     <div class="password">
                     <label for="pass2">Επιβεβαίωση κωδικού πρόσβασης: </label>
-                    <input type="password" id="pass2" name="pass2" minlength="3" placeholder="8 characters minimum - one special character required - one number - one letter" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{3,}$"  required>
+                    <input type="password" id="pass2" name="pass2" minlength="3" placeholder="8 characters minimum - one special character required - one number - one letter"  required>
                     </div>
                     <br><br>
 
-                    <div class="password-error"></div>
+                    <div class="password-error text-sub"></div>
                     <br>
                     <!--
                     <label for="studies">Επίπεδο σπουδών:</label>
@@ -138,7 +138,7 @@
                     <input type="text" id="foreign-lang" name="foreign-lang" placeholder="πχ Αγγλικά-C2, Γαλλικά-Β1, κλπ" required>
                     <br><br> -->
 
-                    
+                    <p class="text-sub network-error" id="p2"></p>
                     <div class = "about-text">
                         <button type="submit" >Ολοκλήρωση Εγγραφής</button>
                         
