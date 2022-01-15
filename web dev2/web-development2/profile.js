@@ -51,6 +51,9 @@ profileForm.addEventListener("submit", (e) => {
         .then( response => { // to return mas apo panw gurnaei promise me ta data
             console.log(response);
             profileForm.style.display = 'none';
+
+            document.getElementById('connection').innerHTML = "Καλωσήρθατε!";
+
             var tmpl = document.getElementById("tmpl-profile").innerHTML; //fortwnw to template
             var compiled_tmpl2 = Handlebars.compile(tmpl); //to kanw compile mesw tou Handlebar
             rendered = compiled_tmpl2(response)

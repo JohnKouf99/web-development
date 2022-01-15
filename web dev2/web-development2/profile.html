@@ -45,26 +45,54 @@
 
             <div class="main-intro form">
                 <p>Είστε ήδη εγγεγραμένος ως μέλος της κοινότητας μας για να απολαμβάνετε την πλήρη εμπειρία του JKed?</p>
-                <p>Συνδεθείτε εδώ:</p>
+                <p id="connection">Συνδεθείτε εδώ:</p>
             </div>
 
             <div class="secondary"></div>
         </div>		
 		<div class="grid-item-3">
+
             <div id="profile-target"></div>
+
+
             <script id="tmpl-profile" type = "text/x-handlebars-template">  
 
-                <img src="images/giphy.gif" class ='grid-image' alt= "kid"> 
-                <p class="text-sub">Email: {{foundUser.email}} </p>
-                <p class="text-sub">Birthdate: {{foundUser.birthdate}} </p>
-                <p class="text-sub">Firstname: {{foundUser.firstname}} </p>
-                <p class="text-sub">Lastname: {{foundUser.lastname}} </p>
-                <p class="text-sub">Graduation year: {{foundUser.gyear}} </p>
-                <p class="text-sub">Address: {{foundUser.address}} </p>
-                <p class="text-sub">Phone number: {{foundUser.phonenumber}} </p>
-                <p class="text-sub">Education level: {{foundUser.studies}} </p>
-                <p class="text-sub">Foreign Language: {{foundUser.forlang}} </p>
-                <p class="text-sub">Course preference: {{foundUser.coursepref}} </p>                
+                <p class="text-head about-text">Τα στοιχεία σας:</p>
+                
+
+                <ul class="custom-list">
+                    
+                            <li><p>
+                                Email: {{foundUser.email}}
+                            </p></li>
+                            <li><p>
+                                Birthdate: {{foundUser.birthdate}}
+                            </p></li>
+                            <li><p>
+                                Firstname: {{foundUser.firstname}}
+                            </p></li>
+                            <li><p>
+                                Lastname: {{foundUser.lastname}}
+                            </p></li>
+                            <li><p>
+                                Graduation year: {{foundUser.gyear}}
+                            </p></li>
+                            <li><p>
+                                Address: {{foundUser.address}}
+                            </p></li>
+                            <li><p>
+                                Phone number: {{foundUser.phonenumber}}
+                            </p></li>
+                            <li><p>
+                                Education level: {{foundUser.studies}}
+                            </p></li>
+                            <li><p>
+                                Foreign Language: {{foundUser.forlang}}
+                            </p></li>
+                            <li><p>
+                                Course preference: {{foundUser.coursepref}}
+                            </p></li>
+                            </ul>              
 
             </script>
 

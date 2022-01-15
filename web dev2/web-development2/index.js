@@ -9,15 +9,6 @@ function init() {
     
 }
 
-/*
-window.onload=function(){
-let btn = document.getElementById("sbtn")
-
-
-btn.addEventListener('click', fetchh)
-
-}*/
-
 
 function fetchh(){
     document.getElementById('target').innerHTML  = "";
@@ -53,7 +44,7 @@ function fetchh(){
                 
                 rendered = compiled_tmpl(data[i]); //kanw render ta data
                 document.getElementById('target').innerHTML  += rendered; //ta prosthetw sto template
-                //console.log(rendered);
+                
 
                 
             }
@@ -89,11 +80,10 @@ function printCategory(){
             var tmpl2 = document.getElementById("tmpl-2").innerHTML; //fortwnw to template
             var compiled_tmpl2 = Handlebars.compile(tmpl2); //to kanw compile mesw tou Handlebar
 
-            console.log(data)
+            
             for(var i=0; i< data.length; i++){
                 
                 rendered2 = compiled_tmpl2(data[i]); //kanw render ta data
-                console.log(rendered2)
                 document.getElementById('target-2').innerHTML  += rendered2; //ta prosthetw sto template
 
             }

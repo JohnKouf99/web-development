@@ -27,7 +27,7 @@ function getCourses(){
         })
         .then(data => {
 
-            console.log(data)
+           
             
             var tmpl = document.getElementById("tmpl-courses").innerHTML; //fortwnw to template
 
@@ -38,7 +38,7 @@ function getCourses(){
                 
                 rendered = compiled_tmpl(data[i]); //kanw render ta data
                 document.getElementById('target-courses').innerHTML  += rendered; //ta prosthetw sto template
-                //console.log(rendered);
+                
 
                 
             }
