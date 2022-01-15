@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JKed | Καλώς ορίσατε στο JKed</title>
+    <link rel="shortcut icon" href="images/favnew.png" type="image/png"> 
+    <link rel="stylesheet" href="stylek.css">
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.7/dist/handlebars.js"></script>
+    <script type="text/javascript" defer src="profile.js"></script>
+</head>
+
+<body >
+
+    <div class = "page-grid-container">
+   
+        <header class = "grid-item-1 flex-container">
+            <div class="container-flex-item">
+                <a href=index.html> <img class="logo" src="images/fav/newlogo.png" alt="logo"> </a>
+            </div>
+
+            <div class = "main-nav">
+                 <nav id="main-nav">
+                    <div class="container-flex-item">
+                        <a href="index.html">ΚΥΡΙΑ ΣΕΛΙΔΑ</a> 
+                    </div>
+                    <div class="container-flex-item">
+                        <a href="about.html">ΣΧΕΤΙΚΑ ΜΕ ΕΜΑΣ</a>
+                    </div> 
+                    <div class="container-flex-item">
+                        <a href="courses.html">ΜΑΘΗΜΑΤΑ</a> 
+                    </div>
+                        <div class="container-flex-item">
+                    <a href="contactus.html">ΕΠΙΚΟΙΝΩΝΙΑ</a>
+                    </div>
+                    <div class="container-flex-item">
+                        <a href="register.html">ΕΓΓΡΑΦΗ</a>
+                    </div>
+                </nav>
+            </div>
+        </header>
+		
+        <div class="grid-item-2">
+
+            <div class="main-intro form">
+                <p>Είστε ήδη εγγεγραμένος ως μέλος της κοινότητας μας για να απολαμβάνετε την πλήρη εμπειρία του JKed?</p>
+                <p>Συνδεθείτε εδώ:</p>
+            </div>
+
+            <div class="secondary"></div>
+        </div>		
+		<div class="grid-item-3">
+            <div id="profile-target"></div>
+            <script id="tmpl-profile" type = "text/x-handlebars-template">  
+
+                <img src="images/giphy.gif" class ='grid-image' alt= "kid"> 
+                <p class="text-sub">Email: {{foundUser.email}} </p>
+                <p class="text-sub">Birthdate: {{foundUser.birthdate}} </p>
+                <p class="text-sub">Firstname: {{foundUser.firstname}} </p>
+                <p class="text-sub">Lastname: {{foundUser.lastname}} </p>
+                <p class="text-sub">Graduation year: {{foundUser.gyear}} </p>
+                <p class="text-sub">Address: {{foundUser.address}} </p>
+                <p class="text-sub">Phone number: {{foundUser.phonenumber}} </p>
+                <p class="text-sub">Education level: {{foundUser.studies}} </p>
+                <p class="text-sub">Foreign Language: {{foundUser.forlang}} </p>
+                <p class="text-sub">Course preference: {{foundUser.coursepref}} </p>                
+
+            </script>
+
+            <form class="registration-form" id="registration-form" method="post" autocomplete="on">
+                <fieldset>
+            
+                    <label for='email'>Email:</label>
+                    <input type="text" id="email" name="email" placeholder="youremail@domain.tld" required>
+
+    
+                    <div class="password">
+                    <label for="pass1">Password:</label>
+                    <input type="password" id="pass1" name="pass1"  minlength="3" placeholder="password" required>
+                    </div>
+                    <br><br>
+
+                    <div class="password-error text-sub"></div>
+                    <br>
+
+
+                    <p class="text-sub network-error" id="p2"></p>
+                    <div class = "about-text">
+                        <button type="submit" >Login</button>
+                        
+                        <br><br>
+                        <button type="reset">Άκυρο</button>
+                    </div>
+
+                </fieldset>
+
+            </form>
+
+            <div class="about-text">
+            <p class="text-sub " id="p1"></p>   
+            <a class="text-sub" href="index.html" id='indexlink'></a> 
+            </div>
+
+
+
+        </div>
+		
+		
+		<footer class= "grid-item-4 flex-container">
+            <div class= "footer-flex-item-1">
+                <p>Εναλλακτικοί τρόποι επικοινωνίας:</p>
+                    
+                <ul>
+                    <li>Τηλ.  2109999999</li>
+                    <li><a href= "mailto:info@jked.gr">Email: info@jked.gr</a></li>
+                    <li><a href="https://www.facebook.com/" target="_blank"> Facebook </a></li>
+                    <li><a href="https://twitter.com/" target="_blank">Twitter </a></li>
+                </ul>
+            </div>
+        
+            <p class= "footer-flex-item-2">© 2021 JKed. All rights reserved.</p>
+        </footer> 
+    </div>       
+</body>
+
+</html>
