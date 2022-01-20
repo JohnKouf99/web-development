@@ -33,7 +33,7 @@ function fetchh(){
         })
         .then(data => {
 
-            console.log(data)
+           
             
             var tmpl = document.getElementById("tmpl").innerHTML; //fortwnw to template
 

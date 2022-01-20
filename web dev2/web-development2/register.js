@@ -35,7 +35,7 @@ form.addEventListener("submit", (e) => { /*event listener gia thn forma*/
         }
     }
     else if(!/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/.test(pass1.value)){ //elegxos gia ena arithmo, ena gramma kai ena special char
-        console.log(pass1.value)
+        
         e.preventDefault();
         let list = document.querySelectorAll(".password-error")
         for (let item of list) {
